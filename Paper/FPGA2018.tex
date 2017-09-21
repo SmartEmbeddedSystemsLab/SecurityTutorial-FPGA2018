@@ -197,7 +197,7 @@ A specification defining the interface and its behavior is required for each IP 
 
 
 \subsubsection{Optimize Models:}
-We chose IA as our internal model due to its capability to handle \textit{compatibility} and \textit{refinement}. While compatibility insures that two communicating components do not perform illegal action, i.e one automaton produces an input that the other cannot consume, refinement allows breakdown within component boundary while still maintaining the compatibility. The sandbox design leverages these two properties to provide compatible and secure interfaces between the IP and the rest of the system through the sandbox. Applying the compatibility concept of IA requires the environment (the IP in our case) not to perform illegal actions, i.e. actions that the sandbox and therefore the rest of  the system doesn't expect. This means that interfaces are assembled only if they are compatible, resulting in a new composed interface. With all policies respresented as Interface Automata, the composition operation can supply an avenue for reducing the policy automata set size through merging automata with consideration for the environmental assumptions of it.
+We chose IA as our internal model due to its capability to handle \textit{composition} and \textit{refinement}. While composition insures that two communicating components do not perform illegal actions, i.e one automaton produces an input that the other cannot consume, refinement allows breakdown within component boundary while still maintaining the compatibility. The sandbox design leverages these two properties to provide compatible and secure interfaces between the IP and the rest of the system through the sandbox. Applying the composition operation of IA requires the environment (the IP in our case) not to perform illegal actions, i.e. actions that the sandbox and therefore the rest of  the system doesn't expect. This means that interfaces are assembled only if they are compatible, resulting in a new composed interface. With all policies respresented as Interface Automata, the composition operation can supply an avenue for reducing the policy automata set size through merging automata with consideration for the environmental assumptions of it.
 
 
 \subsubsection{Generate/Package Sandbox IP:}
@@ -242,6 +242,8 @@ To exploit the vulnerabilities mentioned, we have included a non-secure process 
 \subsubsection{Hardware Threat Insertion:}
 
 Our encryption engine is a prime candidate for inserting a malicious circuit as it will have access to sensitive encryption key data. As our application performs a simple handshake and utilizes both AES and RSA algorithms, we can leverage the Trust-hub.org repository of hardware trojans for AES128 and BasicRSA.
+
+Both AES128 and Basic RSA trojan classes contain variations of activation methods, from always-on trojans to internal condition triggers. We chose the following trojans...
 
 
 \subsection{Adressing Vulnerabilities with Isolation}
