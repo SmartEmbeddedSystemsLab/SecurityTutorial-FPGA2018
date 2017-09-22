@@ -80,7 +80,7 @@
 
 
 \begin{abstract}
-Field Programmable Gate Arrays (FPGAs) platform security management continues to be a strong area of concern despite recent increased adoption and integration of FPGAs into commercial scale cloud computing systems. One of the technical problems in the FPGA security management area has been the lack of hardware primitives to support multi-tenancy while enforcing proper domain isolation. In this paper, we present a tutorial on recent progress that has been made to address this issue. Specifically, we present hardware isolation mechanisms that can be used to enable domain separation on FPGA based systems.
+Field Programmable Gate Arrays (FPGAs) platform security management continues to be a strong area of concern despite recent increased adoption and integration of FPGAs into commercial scale cloud computing systems. One of the technical problems in the FPGA security management area has been the lack of hardware primitives to support multi-tenancy while enforcing proper domain isolation. In this paper, we present a tutorial on recent progress that has been made to address this issue. Specifically, we present hardware isolation mechanisms that can be used to enable domain separation on FPGA based systems. We demonstrate the viability of these mechanisms through a software-hardware codesign implementing a simple TSL/SSL encryption application.
 \end{abstract}
 
 
@@ -116,19 +116,35 @@ Field Programmable Gate Arrays (FPGAs) platform security management continues to
 \section{INTRODUCTION}\label{sec:intro}
 Many of today's critical embedded systems are increasingly relying on FPGA-based SoCs because of the useful balance between the performance, scale, flexibility, and rapid time to market they provide. This was recently exemplified with the recent Audi announcement that its 2018 A8 world's first Level 3 autonomous driving system will feature Altera's Cyclone FPGA SoCs for object and map fusion processing tasks. Though, it's not just in embedded systems space where we are seeing accelerated adoption of FPGA platforms, as they are also being continuously integrated into commercial scale cloud computing systems and data centers as evidenced by Amazon recent announcement of providing cloud compute instances with FPGAs (EC2 F1).
 
-FPGA security continues to be a strong area of concern. Specifically, current FPGA platforms do not possess any hardware primitives that would allow support for multi-tenancy while enforcing proper domain isolation[STILL WORKING ON INTRODUCTION].
+This increased adoption of FPGA into commercial scale cloud computing systems has highlighted the issue of FPGA's lack of hardware primitives, conceptually similar from a security perspective to a CPU's IO memory management unit (IOMMU), to support multi-tenancy while enforcing proper domain separation among the tenants (i.e. multiple applications utilizing the same FPGA) \cite{CloudFPGA}, \cite{CapslHOST}, \cite{Byma2014FPGAsIT}. This lack of native support for isolation creates security concerns where, since FPGA accelerators tend to run with full hardware access, a single accelerator vulnerabilities can be exploited through traditional system software stacks or if malicious, can bring down a shared compute host \cite{CloudFPGA}.
+
+An effective solution to the problem of lack of proper domain separation on FPGAs should be able to enable scaling of security across a range of system parameters, such as power and performance, without significant drop in coverage. We believe and intend to demonstrate that this can only be achieved through some form of combination of measures that protect against hardware vulnerabilities directly at the hardware level and measures that enforce domain separation at the software level.
+
+In this paper, we look at a set of  research works that individually attempted to address the problem of lack of isolation support on FPGAs. We demonstrate how certain elements of these works can be put together to provide an effective and comprehensive solution to this problem. Through a tutorial, we demonstrate the viability of this solution through a real-world software-hardware codesign application which implements a simple TSL/SSL encryption. The remainder of this paper is organized as follow: Section \ref{sec:threat_model} starts by describing the specific use case scenarios and security concerns this method addresses. Section \ref{sec:problem_definition} gives an overview of research works that form the basis of our comprehensive solution. Section \ref{sec:application} and Section \ref{sec:Implementation} conclude the paper with a tutorial demonstrating how a combination of the discussed approaches can be used to provide proper domain isolation on FPGA platform.
+
+
+\section{THREAT MODEL} \label{sec:threat_model}
+
+\begin{figure}[hbt]
+\centering
+\includegraphics[width=0.5\columnwidth]{figures/ThreatModel.pdf}
+\caption{Threat Model: The adversary controls the FPGA SoC and can execute malicious code (non-trusted application + accelerator in red) remotely.}
+\label{fig:threat}
+\end{figure}
+
+The illustration of our threat model in Figure \ref{fig:threat} shows the use case scenario our approach targets. We assume an adversary who can introduce hardware trojans in the IPs during development (supply chain attack). We assume this adversary has remote access to the FPGA system-on-chip (FPGA SoC) which contains some of the malicious IPs and is also aware of the trojans activation mechanisms (Trojans are not active and can only be activated externally by executing some malicious input for ex.). We assume the adversary may also control all the system software including the operating system. Our goal is to prevent unauthorized data access and modification by shielding non-trusted IPs execution into a hardware sandbox and providing secure isolated regions.
 
 \section{HARDWARE ISOLATION MECHANISMS} \label{sec:problem_definition}
 
-This section discusses current techniques that are employed to enforce hardware isolation on FPGAs. This list is by no means exhaustive and it is beyond the scope of this paper to discuss these techniques in greater details. The interested reader is encouraged to refer to cited works.
+This section discusses current techniques that are employed to enforce hardware isolation on FPGAs. This list is by no means exhaustive and it is beyond the scope of this paper to discuss these techniques in greater details. The interested reader is encouraged to refer to cited works. 
 
 
-\subsection{Hardware-enforced Access Control Lists}
+\subsection{Reference Monitors}
 
 In this approach, a hardware module or a microcontroller based firmware-upgradable module is used to monitor and enforce authorized sharing of system
 resources among cores. Memory-access security policies are expressed in a specialized language, and a compiler translates these policies directly to a circuit (or a microcontroller) that enforces the policies. The circuit is then loaded onto the FPGA along with other components of the system.
 
-There are many research efforts with some relation to this approach, but to the best of our current knowledge, works in [CITATION] and in [CITATION] are the only work with similar goals that come close to ours here. In their work, they designed and implemented a reconfigurable reference monitor (RM) which implements an access control list (ACL). They then integrated the reference monitor into the on-chip peripheral bus (OPB) and used it to regulate access to the memory and peripherals. Memory and peripherals accesses go through a reconfigurable monitor's access control list [3]. The access control list associates every object (memory ranges for ex.) in the system with a list of principals (IP cores) with the rights of each principal to access the object[3]. In their implementation, each object access has to be computed by the reference monitor's ACL at runtime. The decision is either granted access or denied access. Since this access model can create potential memory performance issues in large memory applications, they proposed a mechanism in which a buffer is used to hold the data until the ACL grants approval of the legality of the request [3]. Figure ~\ref{fig:ted} illustrates the implementation.For example, in case of a write, the data to be written is stored in the buffer until the ACL grants the approval, at which time the write request is sent to the memory [3].
+There are many research efforts with some relation to this approach, but to the best of our current knowledge, works in \cite{HuffEmbedded} and in \cite{Huffmire} are the only work with similar goals that come close to ours here. In their work, they designed and implemented a reconfigurable reference monitor (RM) which implements an access control list (ACL). They then integrated the reference monitor into the on-chip peripheral bus (OPB) and used it to regulate access to the memory and peripherals. Memory and peripherals accesses go through a reconfigurable monitor's access control list [3]. The access control list associates every object (memory ranges for ex.) in the system with a list of principals (IP cores) with the rights of each principal to access the object[3]. In their implementation, each object access has to be computed by the reference monitor's ACL at runtime. The decision is either granted access or denied access. Since this access model can create potential memory performance issues in large memory applications, they proposed a mechanism in which a buffer is used to hold the data until the ACL grants approval of the legality of the request \cite{SPHuffmire}. Figure ~\ref{fig:ted} illustrates the implementation.For example, in case of a write, the data to be written is stored in the buffer until the ACL grants the approval, at which time the write request is sent to the memory \cite{SPHuffmire}.
 
 
 \begin{figure}[hbt]
@@ -140,7 +156,7 @@ There are many research efforts with some relation to this approach, but to the 
 
 
 
-Authors in [CITATION] observed that in Huffmire et al. access model implementation if you had consecutive and repeated memory access from the same ``principal" to the same ``object". Each one of these requests would still have to go through the reference monitor's computation. This can potentially create performance issues in large designs. These issues can be avoided by adding the capability to remember access decisions. Authors in [CITATION] built upon this observation and proposed an improved implementation of this architecture by adding capability to remember access decisions to allow them to be administered at run-time without re-computations. Figure ~\ref{fig:access} shows their proposed access model.
+Authors in \cite{FestusFCCM} observed that in Huffmire et al. access model implementation if you had consecutive and repeated memory access from the same ``principal" to the same ``object", each one of these requests would still have to go through the reference monitor's computation. This can potentially create performance issues in large designs. These issues can be avoided by adding the capability to remember access decisions. Authors in \cite{FestusFCCM} built upon this observation and proposed an improved implementation of this architecture by adding capability to remember access decisions to allow them to be administered at run-time without re-computations. Figure ~\ref{fig:access} shows their proposed access model.
 
 \begin{figure}[hbt]
 \centering
@@ -151,7 +167,7 @@ Authors in [CITATION] observed that in Huffmire et al. access model implementati
 
 Both of these techniques follow a similar design flow. Systems components are defined and implemented using hardware synthesis tools such as Xilinx's Vivado or Xilinx's XPS.  The hardware-enforced ACL core is generated by some policy compiler and it's then integrated with the rest of the system components similar to adding a standard custom IP to your design [CITAT],[CITAT]. In some instances, however, there can be compatibility issues. Sometimes standard integration of the ACL core can be complicated with the fact that some security-relevant attributes may not be directly available as parameters or easily derived from available parameters. For example, the current version of the AXI Interconnect IP core API available in Vivado 2016 does not present a component ID as a parameter. In situations like these, it's up to the application designer to build their own custom OPB (or AXI interconnect) IP which directly integrates this ACL security functionality.
 
-Authors in [CITATION], [CITATION] observed that the above described techniques assume a ``trusted" reference monitor to enforce the security policies and with no mechanism through which the platform itself can authenticate the authority of the reference monitor before it administers an access policy decision. The security concern here is that an attacker could conduct a man-in-the-middle attack on the system by inserting a malicious circuit inside the only authority entrusted with administrating shared resource access decisions. To mitigate this, they proposed an improved implementation of the reference monitor which combines the monitoring approach with a ``proof-carrying hardware" concept. Their approach consisted of using a consumer-producer approach, where a consumer specifies a desired functionality of the memory access monitor and sends this specification to the producer and the producer synthesizes this information into a bitstream. The producer re-extracts the logic function from this bitstream and, together with the original specification, computes some miter function (which outputs an error flag if the specification and implementation differ for at least one input vector). This proof of reference monitor correctness is then generated along side with the bitstream and is sent to the consumer. The latter verifies the proof, and in case of success partially reconfigures the monitor with security policies. The consumer verifies the proof of correctness from the producer by extracting the monitor's logic function from the bitstream and forms a miter in conjunctive normal form in the same way as the producer, but with the original specification. This new miter is compared to the producer's miter and if they both match, the implementation is accepted and the monitor is accepted. The monitor is rejected if the the miters do not match.
+Authors in \cite{proofcarrying}, \cite{proof}, \cite{proofcar} observed that the above described techniques assume a ``trusted" reference monitor to enforce the security policies and with no mechanism through which the platform itself can authenticate the authority of the reference monitor before it administers an access policy decision. The security concern here is that an attacker could conduct a man-in-the-middle attack on the system by inserting a malicious circuit inside the only authority entrusted with administrating shared resource access decisions. To mitigate this, they proposed an improved implementation of the reference monitor which combines the monitoring approach with a ``proof-carrying hardware" concept. Their approach consisted of using a consumer-producer approach, where a consumer specifies a desired functionality of the memory access monitor and sends this specification to the producer and the producer synthesizes this information into a bitstream \cite{proofcarrying}. The producer re-extracts the logic function from this bitstream and, together with the original specification, computes some miter function (which outputs an error flag if the specification and implementation differ for at least one input vector) \cite{proof}. This proof of reference monitor correctness is then generated along side with the bitstream and is sent to the consumer. The latter verifies the proof, and in case of success partially reconfigures the monitor with security policies \cite{proof}. The consumer verifies the proof of correctness from the producer by extracting the monitor's logic function from the bitstream and forms a miter in conjunctive normal form in the same way as the producer, but with the original specification. This new miter is compared to the producer's miter and if they both match, the implementation is accepted and the monitor is accepted. The monitor is rejected if the the miters do not match \cite{proof}, \cite{proofcar}.
 
 
 \subsection{OS-Enforced Security: Zynq FPGA TrustZone}
@@ -205,7 +221,7 @@ The resulting optimized set of policies can now be translated to a reference mon
 
 
 
-\section{Security Critical Application Example} \label{sec:application}
+\section{SECURITY CRITICAL EXAMPLE APPLICATION} \label{sec:application}
 
 In this section, we introduce an example application to demonstrate the various hardware isolation methods discussed above. Each of the methods has unique strengths and a more comprehensive security profile can be realized upon implementing each in conjunction. We propose a system that performs secure encryption processes (via Hardware-enfored Access Lists and TrustZone) alongside potentially malicious non-secured processes. With our secure process utilizing hardware-accelerated encryption, CAPSL is utilized to secure the encryption engine and enforce the integrity of its behavior. This system suits the implementation of the discussed hardware isolation methods with the inclusion of points of attack in both software and hardware. Below, we detail the example application and address the security vulnerabilites with regard to the introduced isolation methods.
 
@@ -250,7 +266,7 @@ Both AES128 and Basic RSA trojan classes contain variations of activation method
 An accepted paradigm of security for our proposed system would require secure execution for sensitive computations with dedicated hardware resources that are deemed secure. We address the system vulnerabilities as follows:
 
 
-\subsubsection{HACLs and TrustZone:}
+\subsubsection{Reference Monitor and TrustZone:}
 [FESTUS]
 
 \subsubsection{Hardware Sandboxing:}
@@ -262,10 +278,10 @@ To complement the methods discussed for secure process execution, we propose the
 
 
 
-\section{Implementing Isolation} \label{sec:Implementation}
+\section{IMPLEMENTING ISOLATION} \label{sec:Implementation}
 In this section, we discuss implementation details reagrding the steps of applying the isolation methods.
 
-\subsection{HACLs}
+\subsection{Reference Monitor}
 
 \subsection{TrustZone}
 

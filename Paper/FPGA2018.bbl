@@ -37,172 +37,160 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
-\bibitem[\protect\citeauthoryear{Dell, Perrier, Kumar, Lee, Powers, and
-  Borriello}{Dell et~al\mbox{.}}{2015}]%
-        {Dell}
-\bibfield{author}{\bibinfo{person}{Nicola Dell}, \bibinfo{person}{Trevor
-  Perrier}, \bibinfo{person}{Neha Kumar}, \bibinfo{person}{Mitchell Lee},
-  \bibinfo{person}{Rachel Powers}, {and} \bibinfo{person}{Gaetano Borriello}.}
-  \bibinfo{year}{2015}\natexlab{}.
-\newblock \showarticletitle{Paper-Digital Workflows in Global Development
-  Organizations}. In \bibinfo{booktitle}{{\em Proceedings of the 18th ACM
-  Conference on Computer Supported Cooperative Work \&\#38; Social Computing}}
-  {\em (\bibinfo{series}{CSCW '15})}. \bibinfo{publisher}{ACM},
-  \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{1659--1669}.
-\newblock
-\showISBNx{978-1-4503-2922-4}
-\showDOI{%
-\url{https://doi.org/10.1145/2675133.2675145}}
-
-
-\bibitem[\protect\citeauthoryear{Dietterich}{Dietterich}{1995}]%
-        {overfitting}
-\bibfield{author}{\bibinfo{person}{Tom Dietterich}.}
-  \bibinfo{year}{1995}\natexlab{}.
-\newblock \showarticletitle{Overfitting and Undercomputing in Machine
-  Learning}.
-\newblock \bibinfo{journal}{{\em ACM Comput. Surv.\/}} \bibinfo{volume}{27},
-  \bibinfo{number}{3} (\bibinfo{date}{Sept.} \bibinfo{year}{1995}),
-  \bibinfo{pages}{326--327}.
-\newblock
-\showISSN{0360-0300}
-\showDOI{%
-\url{https://doi.org/10.1145/212094.212114}}
-
-
-\bibitem[\protect\citeauthoryear{Girosi, Jones, and Poggio}{Girosi
-  et~al\mbox{.}}{1995}]%
-        {regularization}
-\bibfield{author}{\bibinfo{person}{F. Girosi}, \bibinfo{person}{M. Jones},
-  {and} \bibinfo{person}{T. Poggio}.} \bibinfo{year}{1995}\natexlab{}.
-\newblock \showarticletitle{Regularization Theory and Neural Networks
-  Architectures}.
-\newblock \bibinfo{journal}{{\em Neural Computation\/}} \bibinfo{volume}{7},
-  \bibinfo{number}{2} (\bibinfo{date}{March} \bibinfo{year}{1995}),
-  \bibinfo{pages}{219--269}.
-\newblock
-\showISSN{0899-7667}
-\showDOI{%
-\url{https://doi.org/10.1162/neco.1995.7.2.219}}
-
-
-\bibitem[\protect\citeauthoryear{Goodfellow, Bulatov, Ibarz, Arnoud, and
-  Shet}{Goodfellow et~al\mbox{.}}{2013}]%
-        {GoodfellowBIAS13}
-\bibfield{author}{\bibinfo{person}{Ian~J. Goodfellow},
-  \bibinfo{person}{Yaroslav Bulatov}, \bibinfo{person}{Julian Ibarz},
-  \bibinfo{person}{Sacha Arnoud}, {and} \bibinfo{person}{Vinay~D. Shet}.}
-  \bibinfo{year}{2013}\natexlab{}.
-\newblock \showarticletitle{Multi-digit Number Recognition from Street View
-  Imagery using Deep Convolutional Neural Networks}.
-\newblock \bibinfo{journal}{{\em CoRR\/}}  \bibinfo{volume}{abs/1312.6082}
-  (\bibinfo{year}{2013}).
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Lecun, Bottou, Bengio, and Haffner}{Lecun
-  et~al\mbox{.}}{1998}]%
-        {726791}
-\bibfield{author}{\bibinfo{person}{Y. Lecun}, \bibinfo{person}{L. Bottou},
-  \bibinfo{person}{Y. Bengio}, {and} \bibinfo{person}{P. Haffner}.}
-  \bibinfo{year}{1998}\natexlab{}.
-\newblock \showarticletitle{Gradient-based learning applied to document
-  recognition}.
-\newblock \bibinfo{journal}{{\it Proc. IEEE}} \bibinfo{volume}{86},
-  \bibinfo{number}{11} (\bibinfo{date}{Nov} \bibinfo{year}{1998}),
-  \bibinfo{pages}{2278--2324}.
-\newblock
-\showISSN{0018-9219}
-\showDOI{%
-\url{https://doi.org/10.1109/5.726791}}
-
-
-\bibitem[\protect\citeauthoryear{Ouchtati, Bedda, and Lachouri}{Ouchtati
-  et~al\mbox{.}}{2007}]%
-        {Ouchtati_segmentationand}
-\bibfield{author}{\bibinfo{person}{Salim Ouchtati}, \bibinfo{person}{Mouldi
-  Bedda}, {and} \bibinfo{person}{Abderrazak Lachouri}.}
-  \bibinfo{year}{2007}\natexlab{}.
-\newblock \bibinfo{title}{Segmentation and Recognition of Handwritten Numeric
-  Chains 1}.
-\newblock   (\bibinfo{year}{2007}).
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Saldanha and Bobda}{Saldanha and
-  Bobda}{2015}]%
-        {luca2015}
-\bibfield{author}{\bibinfo{person}{L.~B. Saldanha} {and} \bibinfo{person}{C.
-  Bobda}.} \bibinfo{year}{2015}\natexlab{}.
-\newblock \showarticletitle{A System on Reconfigurable Chip for Handwritten
-  Digit Recognition}. In \bibinfo{booktitle}{{\em 2015 IEEE 23rd Annual
-  International Symposium on Field-Programmable Custom Computing Machines}}.
-  \bibinfo{pages}{166--166}.
+\bibitem[\protect\citeauthoryear{Bobda, Whitaker, Kamhoua, Kwiat, and
+  Njilla}{Bobda et~al\mbox{.}}{2017}]%
+        {CapslHOST}
+\bibfield{author}{\bibinfo{person}{C. Bobda}, \bibinfo{person}{T.~J.~L.
+  Whitaker}, \bibinfo{person}{C. Kamhoua}, \bibinfo{person}{K. Kwiat}, {and}
+  \bibinfo{person}{L. Njilla}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Synthesis of hardware sandboxes for Trojan
+  mitigation in systems on chip}. In \bibinfo{booktitle}{{\em 2017 IEEE
+  International Symposium on Hardware Oriented Security and Trust (HOST)}}.
+  \bibinfo{pages}{172--172}.
 \newblock
 \showDOI{%
-\url{https://doi.org/10.1109/FCCM.2015.44}}
+\url{https://doi.org/10.1109/HST.2017.7951836}}
 
 
-\bibitem[\protect\citeauthoryear{Saldanha and Bobda}{Saldanha and
-  Bobda}{2016}]%
-        {luca2016}
-\bibfield{author}{\bibinfo{person}{L.~B. Saldanha} {and} \bibinfo{person}{C.
-  Bobda}.} \bibinfo{year}{2016}\natexlab{}.
-\newblock \showarticletitle{Sparsely connected neural networks in FPGA for
-  handwritten digit recognition}. In \bibinfo{booktitle}{{\em 2016 17th
-  International Symposium on Quality Electronic Design (ISQED)}}.
-  \bibinfo{pages}{113--117}.
+\bibitem[\protect\citeauthoryear{Byma, Steffan, Bannazadeh, Leon-Garcia, and
+  Chow}{Byma et~al\mbox{.}}{2014}]%
+        {Byma2014FPGAsIT}
+\bibfield{author}{\bibinfo{person}{Stuart Byma}, \bibinfo{person}{J.~Gregory
+  Steffan}, \bibinfo{person}{Hadi Bannazadeh}, \bibinfo{person}{Alberto
+  Leon-Garcia}, {and} \bibinfo{person}{Paul Chow}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{FPGAs in the Cloud: Booting Virtualized Hardware
+  Accelerators with OpenStack}.
+\newblock \bibinfo{journal}{{\em 2014 IEEE 22nd Annual International Symposium
+  on Field-Programmable Custom Computing Machines\/}} (\bibinfo{year}{2014}),
+  \bibinfo{pages}{109--116}.
 \newblock
-\showISSN{1948-3295}
+
+
+\bibitem[\protect\citeauthoryear{Chen, Shan, Zhang, Wang, Franke, Chang, and
+  Wang}{Chen et~al\mbox{.}}{2014}]%
+        {CloudFPGA}
+\bibfield{author}{\bibinfo{person}{Fei Chen}, \bibinfo{person}{Yi Shan},
+  \bibinfo{person}{Yu Zhang}, \bibinfo{person}{Yu Wang},
+  \bibinfo{person}{Hubertus Franke}, \bibinfo{person}{Xiaotao Chang}, {and}
+  \bibinfo{person}{Kun Wang}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Enabling FPGAs in the Cloud}. In
+  \bibinfo{booktitle}{{\em Proceedings of the 11th ACM Conference on Computing
+  Frontiers}} {\em (\bibinfo{series}{CF '14})}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{New York, NY, USA}, Article \bibinfo{articleno}{3},
+  \bibinfo{numpages}{10}~pages.
+\newblock
+\showISBNx{978-1-4503-2870-8}
+
+
+\bibitem[\protect\citeauthoryear{Drzevitzky}{Drzevitzky}{2010}]%
+        {proofcarrying}
+\bibfield{author}{\bibinfo{person}{S. Drzevitzky}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Proof-Carrying Hardware: Runtime Formal
+  Verification for Secure Dynamic Reconfiguration}. In \bibinfo{booktitle}{{\em
+  2010 International Conference on Field Programmable Logic and Applications}}.
+  \bibinfo{pages}{255--258}.
+\newblock
+\showISSN{1946-147X}
 \showDOI{%
-\url{https://doi.org/10.1109/ISQED.2016.7479185}}
+\url{https://doi.org/10.1109/FPL.2010.59}}
 
 
-\bibitem[\protect\citeauthoryear{Schaul, Zhang, and LeCun}{Schaul
-  et~al\mbox{.}}{2013}]%
-        {schaul}
-\bibfield{author}{\bibinfo{person}{Tom Schaul}, \bibinfo{person}{Sixin Zhang},
-  {and} \bibinfo{person}{Yann LeCun}.} \bibinfo{year}{2013}\natexlab{}.
-\newblock \showarticletitle{No more Pesky Learning Rates}. In
-  \bibinfo{booktitle}{{\em Proc. International Conference on Machine learning
-  (ICML'13)}}.
+\bibitem[\protect\citeauthoryear{Drzevitzky, Kastens, and Platzner}{Drzevitzky
+  et~al\mbox{.}}{2009}]%
+        {proofcar}
+\bibfield{author}{\bibinfo{person}{S. Drzevitzky}, \bibinfo{person}{U.
+  Kastens}, {and} \bibinfo{person}{M. Platzner}.}
+  \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Proof-Carrying Hardware: Towards Runtime
+  Verification of Reconfigurable Modules}. In \bibinfo{booktitle}{{\em 2009
+  International Conference on Reconfigurable Computing and FPGAs}}.
+  \bibinfo{pages}{189--194}.
 \newblock
+\showISSN{2325-6532}
+\showDOI{%
+\url{https://doi.org/10.1109/ReConFig.2009.31}}
 
 
-\bibitem[\protect\citeauthoryear{Tang, Deng, and Huang}{Tang
-  et~al\mbox{.}}{2016}]%
-        {mlp}
-\bibfield{author}{\bibinfo{person}{J. Tang}, \bibinfo{person}{C. Deng}, {and}
-  \bibinfo{person}{G.~B. Huang}.} \bibinfo{year}{2016}\natexlab{}.
-\newblock \showarticletitle{Extreme Learning Machine for Multilayer
-  Perceptron}.
-\newblock \bibinfo{journal}{{\em IEEE Transactions on Neural Networks and
-  Learning Systems\/}} \bibinfo{volume}{27}, \bibinfo{number}{4}
-  (\bibinfo{date}{April} \bibinfo{year}{2016}), \bibinfo{pages}{809--821}.
+\bibitem[\protect\citeauthoryear{Hategekimana and Bobda}{Hategekimana and
+  Bobda}{2017}]%
+        {FestusFCCM}
+\bibfield{author}{\bibinfo{person}{F. Hategekimana} {and} \bibinfo{person}{C.
+  Bobda}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Applying the Flask Security Architecture to Secure
+  SoC Design}. In \bibinfo{booktitle}{{\em 2017 IEEE 25th Annual International
+  Symposium on Field-Programmable Custom Computing Machines (FCCM)}}.
+  \bibinfo{pages}{198--198}.
 \newblock
-\showISSN{2162-237X}
+\showDOI{%
+\url{https://doi.org/10.1109/FCCM.2017.28}}
 
 
-\bibitem[\protect\citeauthoryear{Xilinx}{Xilinx}{2014}]%
-        {xilinxzynq}
-Xilinx \bibinfo{year}{2014}\natexlab{}.
-\newblock \bibinfo{booktitle}{{\em ZYBO Reference Manual}}.
-\newblock Xilinx.
+\bibitem[\protect\citeauthoryear{Huffmire, Brotherton, Callegari, Valamehr,
+  White, Kastner, and Sherwood}{Huffmire et~al\mbox{.}}{2008a}]%
+        {Huffmire}
+\bibfield{author}{\bibinfo{person}{Ted Huffmire}, \bibinfo{person}{Brett
+  Brotherton}, \bibinfo{person}{Nick Callegari}, \bibinfo{person}{Jonathan
+  Valamehr}, \bibinfo{person}{Jeff White}, \bibinfo{person}{Ryan Kastner},
+  {and} \bibinfo{person}{Tim Sherwood}.} \bibinfo{year}{2008}\natexlab{a}.
+\newblock \showarticletitle{Designing Secure Systems on Reconfigurable
+  Hardware}.
+\newblock \bibinfo{journal}{{\em ACM Trans. Des. Autom. Electron. Syst.\/}}
+  \bibinfo{volume}{13}, \bibinfo{number}{3}, Article \bibinfo{articleno}{44}
+  (\bibinfo{date}{July} \bibinfo{year}{2008}), \bibinfo{numpages}{24}~pages.
 \newblock
-\newblock
-\shownote{v6.}
+\showISSN{1084-4309}
+\showDOI{%
+\url{https://doi.org/10.1145/1367045.1367053}}
 
 
-\bibitem[\protect\citeauthoryear{Yang and Pu}{Yang and Pu}{2015}]%
-        {yangpu2015}
-\bibfield{author}{\bibinfo{person}{Xuan Yang} {and} \bibinfo{person}{Jing Pu}.}
-  \bibinfo{year}{2015}\natexlab{}.
-\newblock \bibinfo{title}{Multi-digit Recognition using Convolution Neural
-  Network on Mobile}.
-\newblock   (\bibinfo{year}{2015}).
+\bibitem[\protect\citeauthoryear{Huffmire, Brotherton, Sherwood, Kastner,
+  Levin, Nguyen, and Irvine}{Huffmire et~al\mbox{.}}{2008b}]%
+        {HuffEmbedded}
+\bibfield{author}{\bibinfo{person}{T. Huffmire}, \bibinfo{person}{B.
+  Brotherton}, \bibinfo{person}{T. Sherwood}, \bibinfo{person}{R. Kastner},
+  \bibinfo{person}{T. Levin}, \bibinfo{person}{T.~D. Nguyen}, {and}
+  \bibinfo{person}{C. Irvine}.} \bibinfo{year}{2008}\natexlab{b}.
+\newblock \showarticletitle{Managing Security in FPGA-Based Embedded Systems}.
+\newblock \bibinfo{journal}{{\em IEEE Design Test of Computers\/}}
+  \bibinfo{volume}{25}, \bibinfo{number}{6} (\bibinfo{date}{Nov}
+  \bibinfo{year}{2008}), \bibinfo{pages}{590--598}.
 \newblock
-\showURL{%
-\url{https://web.stanford.edu/class/cs231m/projects/final-report-yang-pu.pdf}}
+\showISSN{0740-7475}
+\showDOI{%
+\url{https://doi.org/10.1109/MDT.2008.166}}
+
+
+\bibitem[\protect\citeauthoryear{Huffmire, Brotherton, Wang, Sherwood, Kastner,
+  Levin, Nguyen, and Irvine}{Huffmire et~al\mbox{.}}{2007}]%
+        {SPHuffmire}
+\bibfield{author}{\bibinfo{person}{T. Huffmire}, \bibinfo{person}{B.
+  Brotherton}, \bibinfo{person}{G. Wang}, \bibinfo{person}{T. Sherwood},
+  \bibinfo{person}{R. Kastner}, \bibinfo{person}{T. Levin}, \bibinfo{person}{T.
+  Nguyen}, {and} \bibinfo{person}{C. Irvine}.} \bibinfo{year}{2007}\natexlab{}.
+\newblock \showarticletitle{Moats and Drawbridges: An Isolation Primitive for
+  Reconfigurable Hardware Based Systems}. In \bibinfo{booktitle}{{\em 2007 IEEE
+  Symposium on Security and Privacy (SP '07)}}. \bibinfo{pages}{281--295}.
+\newblock
+\showISSN{1081-6011}
+\showDOI{%
+\url{https://doi.org/10.1109/SP.2007.28}}
+
+
+\bibitem[\protect\citeauthoryear{Wiersema, Drzevitzky, and Platzner}{Wiersema
+  et~al\mbox{.}}{2014}]%
+        {proof}
+\bibfield{author}{\bibinfo{person}{T. Wiersema}, \bibinfo{person}{S.
+  Drzevitzky}, {and} \bibinfo{person}{M. Platzner}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Memory security in reconfigurable computers:
+  Combining formal verification with monitoring}. In \bibinfo{booktitle}{{\em
+  2014 International Conference on Field-Programmable Technology (FPT)}}.
+  \bibinfo{pages}{167--174}.
+\newblock
+\showDOI{%
+\url{https://doi.org/10.1109/FPT.2014.7082771}}
 
 
 \end{thebibliography}

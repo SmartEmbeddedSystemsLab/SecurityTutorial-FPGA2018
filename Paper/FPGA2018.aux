@@ -16,64 +16,84 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{CloudFPGA}
+\citation{CapslHOST}
+\citation{Byma2014FPGAsIT}
+\citation{CloudFPGA}
 \@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.2}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}INTRODUCTION}{1}{section.1}}
 \newlabel{sec:intro}{{1}{1}{INTRODUCTION}{section.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}HARDWARE ISOLATION MECHANISMS}{1}{section.2}}
-\newlabel{sec:problem_definition}{{2}{1}{HARDWARE ISOLATION MECHANISMS}{section.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Hardware-enforced Access Control Lists}{1}{subsection.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Access Model Implementation. On the left, there's no "caching" mechanism. On the right, a buffer is used to hold the data while access rights are being looked up.\relax }}{2}{figure.caption.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}THREAT MODEL}{1}{section.2}}
+\newlabel{sec:threat_model}{{2}{1}{THREAT MODEL}{section.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Threat Model: The adversary controls the FPGA SoC and can execute malicious code (non-trusted application + accelerator in red) remotely.\relax }}{1}{figure.caption.5}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:ted}{{1}{2}{Access Model Implementation. On the left, there's no "caching" mechanism. On the right, a buffer is used to hold the data while access rights are being looked up.\relax }{figure.caption.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Improved Access Model Implementation.\relax }}{2}{figure.caption.6}}
-\newlabel{fig:access}{{2}{2}{Improved Access Model Implementation.\relax }{figure.caption.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}OS-Enforced Security: Zynq FPGA TrustZone}{2}{subsection.2.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Improved Access Model Implementation.\relax }}{3}{figure.caption.7}}
-\newlabel{fig:trustzone}{{3}{3}{Improved Access Model Implementation.\relax }{figure.caption.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}CAPSL: Automatic Generation of Hardware Sandboxes}{3}{subsection.2.3}}
-\newlabel{sec:CAPSL}{{2.3}{3}{CAPSL: Automatic Generation of Hardware Sandboxes}{subsection.2.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Construct Internal IP Interface Models:}{3}{subsubsection.2.3.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Optimize Models:}{3}{subsubsection.2.3.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3}Generate/Package Sandbox IP:}{3}{subsubsection.2.3.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Security Critical Application Example}{4}{section.3}}
-\newlabel{sec:application}{{3}{4}{Security Critical Application Example}{section.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Overview}{4}{subsection.3.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Secure Echo Server Process:}{4}{subsubsection.3.1.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Hardware Accelerated Encryption Engine:}{4}{subsubsection.3.1.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Security Vulnerabilities}{4}{subsection.3.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Software Threat Insertion:}{4}{subsubsection.3.2.1}}
+\newlabel{fig:threat}{{1}{1}{Threat Model: The adversary controls the FPGA SoC and can execute malicious code (non-trusted application + accelerator in red) remotely.\relax }{figure.caption.5}{}}
+\citation{HuffEmbedded}
+\citation{Huffmire}
+\citation{SPHuffmire}
+\citation{SPHuffmire}
+\citation{FestusFCCM}
+\citation{FestusFCCM}
+\citation{proofcarrying}
+\citation{proof}
+\citation{proofcar}
+\citation{proofcarrying}
+\citation{proof}
+\citation{proof}
+\citation{proof}
+\citation{proofcar}
+\@writefile{toc}{\contentsline {section}{\numberline {3}HARDWARE ISOLATION MECHANISMS}{2}{section.3}}
+\newlabel{sec:problem_definition}{{3}{2}{HARDWARE ISOLATION MECHANISMS}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Reference Monitors}{2}{subsection.3.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Access Model Implementation. On the left, there's no "caching" mechanism. On the right, a buffer is used to hold the data while access rights are being looked up.\relax }}{2}{figure.caption.6}}
+\newlabel{fig:ted}{{2}{2}{Access Model Implementation. On the left, there's no "caching" mechanism. On the right, a buffer is used to hold the data while access rights are being looked up.\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Improved Access Model Implementation.\relax }}{2}{figure.caption.7}}
+\newlabel{fig:access}{{3}{2}{Improved Access Model Implementation.\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}OS-Enforced Security: Zynq FPGA TrustZone}{3}{subsection.3.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Improved Access Model Implementation.\relax }}{3}{figure.caption.8}}
+\newlabel{fig:trustzone}{{4}{3}{Improved Access Model Implementation.\relax }{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}CAPSL: Automatic Generation of Hardware Sandboxes}{4}{subsection.3.3}}
+\newlabel{sec:CAPSL}{{3.3}{4}{CAPSL: Automatic Generation of Hardware Sandboxes}{subsection.3.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Construct Internal IP Interface Models:}{4}{subsubsection.3.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Optimize Models:}{4}{subsubsection.3.3.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}Generate/Package Sandbox IP:}{4}{subsubsection.3.3.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}SECURITY CRITICAL EXAMPLE APPLICATION}{4}{section.4}}
+\newlabel{sec:application}{{4}{4}{SECURITY CRITICAL EXAMPLE APPLICATION}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Overview}{4}{subsection.4.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Secure Echo Server Process:}{4}{subsubsection.4.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Hardware Accelerated Encryption Engine:}{5}{subsubsection.4.1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Security Vulnerabilities}{5}{subsection.4.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Software Threat Insertion:}{5}{subsubsection.4.2.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Hardware Threat Insertion:}{5}{subsubsection.4.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Adressing Vulnerabilities with Isolation}{5}{subsection.4.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Reference Monitor and TrustZone:}{5}{subsubsection.4.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Hardware Sandboxing:}{5}{subsubsection.4.3.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}IMPLEMENTING ISOLATION}{5}{section.5}}
+\newlabel{sec:Implementation}{{5}{5}{IMPLEMENTING ISOLATION}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Reference Monitor}{5}{subsection.5.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}TrustZone}{5}{subsection.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}CAPSL}{5}{subsection.5.3}}
 \bibstyle{ACM-Reference-Format}
 \bibdata{FPGA2018}
-\bibcite{Dell}{{1}{2015}{{Dell et~al\unhbox \voidb@x \hbox {.}}}{{Dell, Perrier, Kumar, Lee, Powers, and Borriello}}}
-\bibcite{overfitting}{{2}{1995}{{Dietterich}}{{Dietterich}}}
-\bibcite{regularization}{{3}{1995}{{Girosi et~al\unhbox \voidb@x \hbox {.}}}{{Girosi, Jones, and Poggio}}}
-\bibcite{GoodfellowBIAS13}{{4}{2013}{{Goodfellow et~al\unhbox \voidb@x \hbox {.}}}{{Goodfellow, Bulatov, Ibarz, Arnoud, and Shet}}}
-\bibcite{726791}{{5}{1998}{{Lecun et~al\unhbox \voidb@x \hbox {.}}}{{Lecun, Bottou, Bengio, and Haffner}}}
-\bibcite{Ouchtati_segmentationand}{{6}{2007}{{Ouchtati et~al\unhbox \voidb@x \hbox {.}}}{{Ouchtati, Bedda, and Lachouri}}}
-\bibcite{luca2015}{{7}{2015}{{Saldanha and Bobda}}{{Saldanha and Bobda}}}
-\bibcite{luca2016}{{8}{2016}{{Saldanha and Bobda}}{{Saldanha and Bobda}}}
-\bibcite{schaul}{{9}{2013}{{Schaul et~al\unhbox \voidb@x \hbox {.}}}{{Schaul, Zhang, and LeCun}}}
-\bibcite{mlp}{{10}{2016}{{Tang et~al\unhbox \voidb@x \hbox {.}}}{{Tang, Deng, and Huang}}}
-\bibcite{xilinxzynq}{{11}{2014}{{Xilinx}}{{Xilinx}}}
-\bibcite{yangpu2015}{{12}{2015}{{Yang and Pu}}{{Yang and Pu}}}
+\bibcite{CapslHOST}{{1}{2017}{{Bobda et~al\unhbox \voidb@x \hbox {.}}}{{Bobda, Whitaker, Kamhoua, Kwiat, and Njilla}}}
+\bibcite{Byma2014FPGAsIT}{{2}{2014}{{Byma et~al\unhbox \voidb@x \hbox {.}}}{{Byma, Steffan, Bannazadeh, Leon-Garcia, and Chow}}}
+\bibcite{CloudFPGA}{{3}{2014}{{Chen et~al\unhbox \voidb@x \hbox {.}}}{{Chen, Shan, Zhang, Wang, Franke, Chang, and Wang}}}
+\bibcite{proofcarrying}{{4}{2010}{{Drzevitzky}}{{Drzevitzky}}}
+\bibcite{proofcar}{{5}{2009}{{Drzevitzky et~al\unhbox \voidb@x \hbox {.}}}{{Drzevitzky, Kastens, and Platzner}}}
+\bibcite{FestusFCCM}{{6}{2017}{{Hategekimana and Bobda}}{{Hategekimana and Bobda}}}
+\bibcite{Huffmire}{{7}{2008a}{{Huffmire et~al\unhbox \voidb@x \hbox {.}}}{{Huffmire, Brotherton, Callegari, Valamehr, White, Kastner, and Sherwood}}}
+\bibcite{HuffEmbedded}{{8}{2008b}{{Huffmire et~al\unhbox \voidb@x \hbox {.}}}{{Huffmire, Brotherton, Sherwood, Kastner, Levin, Nguyen, and Irvine}}}
+\bibcite{SPHuffmire}{{9}{2007}{{Huffmire et~al\unhbox \voidb@x \hbox {.}}}{{Huffmire, Brotherton, Wang, Sherwood, Kastner, Levin, Nguyen, and Irvine}}}
+\bibcite{proof}{{10}{2014}{{Wiersema et~al\unhbox \voidb@x \hbox {.}}}{{Wiersema, Drzevitzky, and Platzner}}}
 \newlabel{tocindent-1}{0pt}
 \newlabel{tocindent0}{0pt}
 \newlabel{tocindent1}{0pt}
 \newlabel{tocindent2}{0pt}
 \newlabel{tocindent3}{0pt}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Hardware Threat Insertion:}{5}{subsubsection.3.2.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Adressing Vulnerabilities with Isolation}{5}{subsection.3.3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}HACLs and TrustZone:}{5}{subsubsection.3.3.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Hardware Sandboxing:}{5}{subsubsection.3.3.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Implementing Isolation}{5}{section.4}}
-\newlabel{sec:Implementation}{{4}{5}{Implementing Isolation}{section.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}HACLs}{5}{subsection.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}TrustZone}{5}{subsection.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}CAPSL}{5}{subsection.4.3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}IP Specification:}{5}{subsubsection.4.3.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Model Optimization:}{5}{subsubsection.4.3.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}Sandbox Generation:}{5}{subsubsection.4.3.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{5}{section.5}}
-\newlabel{sec:conclusion}{{5}{5}{Conclusion}{section.5}{}}
-\@writefile{toc}{\contentsline {section}{References}{5}{section*.9}}
-\newlabel{TotPages}{{5}{5}{}{page.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}IP Specification:}{6}{subsubsection.5.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Model Optimization:}{6}{subsubsection.5.3.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.3}Sandbox Generation:}{6}{subsubsection.5.3.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{6}{section.6}}
+\newlabel{sec:conclusion}{{6}{6}{Conclusion}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{References}{6}{section*.10}}
+\newlabel{TotPages}{{6}{6}{}{page.6}{}}
