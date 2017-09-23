@@ -83,6 +83,21 @@
 \showISBNx{978-1-4503-2870-8}
 
 
+\bibitem[\protect\citeauthoryear{de~Alfaro and Henzinger}{de~Alfaro and
+  Henzinger}{2001}]%
+        {deAlfaro}
+\bibfield{author}{\bibinfo{person}{Luca de Alfaro} {and}
+  \bibinfo{person}{Thomas~A. Henzinger}.} \bibinfo{year}{2001}\natexlab{}.
+\newblock \showarticletitle{Interface Automata}.
+\newblock \bibinfo{journal}{{\em SIGSOFT Softw. Eng. Notes\/}}
+  \bibinfo{volume}{26}, \bibinfo{number}{5} (\bibinfo{date}{Sept.}
+  \bibinfo{year}{2001}), \bibinfo{pages}{109--120}.
+\newblock
+\showISSN{0163-5948}
+\showDOI{%
+\url{https://doi.org/10.1145/503271.503226}}
+
+
 \bibitem[\protect\citeauthoryear{Drzevitzky}{Drzevitzky}{2010}]%
         {proofcarrying}
 \bibfield{author}{\bibinfo{person}{S. Drzevitzky}.}
@@ -111,6 +126,18 @@
 \showISSN{2325-6532}
 \showDOI{%
 \url{https://doi.org/10.1109/ReConFig.2009.31}}
+
+
+\bibitem[\protect\citeauthoryear{Glazberg, Moulin, Orni, Ruah, and
+  Zarpas}{Glazberg et~al\mbox{.}}{2007}]%
+        {psl}
+\bibfield{author}{\bibinfo{person}{Ziv Glazberg}, \bibinfo{person}{Mark
+  Moulin}, \bibinfo{person}{Avigail Orni}, \bibinfo{person}{Sitvanit Ruah},
+  {and} \bibinfo{person}{Emmanuel Zarpas}.} \bibinfo{year}{2007}\natexlab{}.
+\newblock \bibinfo{booktitle}{{\em PSL: Beyond Hardware Verification}}.
+\newblock \bibinfo{publisher}{Springer Netherlands}.
+\newblock
+\showISBNx{978-1-4020-6254-4}
 
 
 \bibitem[\protect\citeauthoryear{Hategekimana and Bobda}{Hategekimana and
@@ -176,6 +203,19 @@
 \showISSN{1081-6011}
 \showDOI{%
 \url{https://doi.org/10.1109/SP.2007.28}}
+
+
+\bibitem[\protect\citeauthoryear{Whitaker and Bobda}{Whitaker and
+  Bobda}{2017}]%
+        {CAPSL}
+\bibfield{author}{\bibinfo{person}{T.~J.~L. Whitaker} {and} \bibinfo{person}{C.
+  Bobda}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{CAPSL: The Component Authentication Process for
+  Sandboxed Layouts}. In \bibinfo{booktitle}{{\em 2017 IEEE Computer Society
+  Annual Symposium on VLSI (ISVLSI)}}. \bibinfo{pages}{409--414}.
+\newblock
+\showDOI{%
+\url{https://doi.org/10.1109/ISVLSI.2017.78}}
 
 
 \bibitem[\protect\citeauthoryear{Wiersema, Drzevitzky, and Platzner}{Wiersema
