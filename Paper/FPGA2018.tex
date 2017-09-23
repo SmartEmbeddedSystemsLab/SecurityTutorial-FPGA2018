@@ -80,7 +80,7 @@
 
 
 \begin{abstract}
-Field Programmable Gate Arrays (FPGAs) platform security management continues to be a strong area of concern despite recent increased adoption and integration of FPGAs into commercial scale cloud computing systems. One of the technical problems in the FPGA security management area has been the lack of hardware primitives to support multi-tenancy while enforcing proper domain isolation. In this paper, we present a tutorial on recent progress that has been made to address this issue. Specifically, we present hardware isolation mechanisms that can be used to enable domain separation on FPGA based systems. We demonstrate the viability of these mechanisms through a software-hardware codesign implementing a simple TSL/SSL encryption application.
+Field Programmable Gate Arrays (FPGAs) platform security management continues to be a strong area of concern despite recent increased adoption and integration of FPGAs into commercial scale cloud computing systems. One of the technical problems in the FPGA security management area has been the lack of hardware primitives to support multi-tenancy while enforcing proper domain isolation. In this tutorial, we present recent progress that has been made to address this issue. Specifically, we present hardware isolation mechanisms that can be used to enable domain separation on FPGA based systems. We demonstrate the viability of these mechanisms through a software-hardware codesign implementing a simple TSL/SSL encryption application.
 \end{abstract}
 
 
@@ -116,28 +116,51 @@ Field Programmable Gate Arrays (FPGAs) platform security management continues to
 \section{INTRODUCTION}\label{sec:intro}
 Many of today's critical embedded systems are increasingly relying on FPGA-based SoCs because of the useful balance between the performance, scale, flexibility, and rapid time to market they provide. This was recently exemplified with the recent Audi announcement that its 2018 A8 world's first Level 3 autonomous driving system will feature Altera's Cyclone FPGA SoCs for object and map fusion processing tasks. Though, it's not just in embedded systems space where we are seeing accelerated adoption of FPGA platforms, as they are also being continuously integrated into commercial scale cloud computing systems and data centers as evidenced by Amazon recent announcement of providing cloud compute instances with FPGAs (EC2 F1).
 
-This increased adoption of FPGA into commercial scale cloud computing systems has highlighted the issue of FPGA's lack of hardware primitives, conceptually similar from a security perspective to a CPU's IO memory management unit (IOMMU), to support multi-tenancy while enforcing proper domain separation among the tenants (i.e. multiple applications utilizing the same FPGA) \cite{CloudFPGA}, \cite{CapslHOST}, \cite{Byma2014FPGAsIT}. This lack of native support for isolation creates security concerns where, since FPGA accelerators tend to run with full hardware access, a single accelerator vulnerabilities can be exploited through traditional system software stacks or if malicious, can bring down a shared compute host \cite{CloudFPGA}.
+This increased adoption of FPGA into commercial scale cloud computing systems has highlighted the issue of FPGA's lack of hardware primitives, conceptually similar from a security perspective to a CPU's IO memory management unit (IOMMU), to support multi-tenancy while enforcing proper domain separation among the tenants (i.e. multiple applications utilizing the same FPGA) \cite{CloudFPGA}, \cite{CapslHOST}, \cite{Byma2014FPGAsIT}. This lack of native support for isolation creates security concerns where: 1) Since FPGA accelerators tend to run with full hardware access, a single accelerator vulnerabilities can be exploited through traditional system software stacks or if malicious, can bring down a shared compute host \cite{CloudFPGA}. Or 2) tenants are not able to protect confidentiality and integrity of their application  data not only from other tenants, but also from other unauthorized parties including privileged system software, such as the hypervisor \cite{sconee}.
 
-An effective solution to the problem of lack of proper domain separation on FPGAs should be able to enable scaling of security across a range of system parameters, such as power and performance, without significant drop in coverage. We believe and intend to demonstrate that this can only be achieved through some form of combination of measures that protect against hardware vulnerabilities directly at the hardware level and measures that enforce domain separation at the software level.
+An effective solution to the problem of lack of proper domain separation on FPGAs should be able to enable scaling of security across a range of system parameters, such as power and performance, without significant drop in coverage. We believe and intend to demonstrate in this tutorial that this can only be achieved through some form of combination of measures that protect against hardware vulnerabilities directly at the hardware level and measures that enforce domain separation at the software level.In this tutorial, we look at a set of  research works that individually attempted to address the problem of lack of isolation support on FPGAs. We demonstrate how certain elements of these works can be put together to provide an effective and comprehensive solution to this problem. We demonstrate the viability of this solution through a real-world software-hardware codesign application which implements a simple TSL/SSL encryption. 
 
-In this paper, we look at a set of  research works that individually attempted to address the problem of lack of isolation support on FPGAs. We demonstrate how certain elements of these works can be put together to provide an effective and comprehensive solution to this problem. Through a tutorial, we demonstrate the viability of this solution through a real-world software-hardware codesign application which implements a simple TSL/SSL encryption. The remainder of this paper is organized as follow: Section \ref{sec:threat_model} starts by describing the specific use case scenarios and security concerns this method addresses. Section \ref{sec:problem_definition} gives an overview of research works that form the basis of our comprehensive solution. Section \ref{sec:application} and Section \ref{sec:Implementation} conclude the paper with a tutorial demonstrating how a combination of the discussed approaches can be used to provide proper domain isolation on FPGA platform.
+The remainder of this work is organized as follow: Section \ref{sec:threat_model} starts by describing the specific use case scenarios and security concerns this method addresses. Section \ref{sec:problem_definition} gives an overview of research works that form the basis of our comprehensive solution. Section \ref{sec:application} and Section \ref{sec:Implementation} conclude the paper with a tutorial demonstrating how a combination of the discussed approaches can be used to provide proper domain isolation on FPGA platform.
 
-
-\section{THREAT MODEL} \label{sec:threat_model}
-
-\begin{figure}[hbt]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.5\columnwidth]{figures/ThreatModel.pdf}
-\caption{Threat Model: The adversary controls the FPGA SoC and can execute malicious code (non-trusted application + accelerator in red) remotely.}
+\caption{Embedded system threat model: The adversary controls the FPGA SoC and can execute malicious code (non-trusted application + accelerator in red) remotely and launch a denial-of-service attack to an IO component.}
 \label{fig:threat}
 \end{figure}
 
-The illustration of our threat model in Figure \ref{fig:threat} shows the use case scenario our approach targets. We assume an adversary who can introduce hardware trojans in the IPs during development (supply chain attack). We assume this adversary has remote access to the FPGA system-on-chip (FPGA SoC) which contains some of the malicious IPs and is also aware of the trojans activation mechanisms (Trojans are not active and can only be activated externally by executing some malicious input for ex.). We assume the adversary may also control all the system software including the operating system. Our goal is to prevent unauthorized data access and modification by shielding non-trusted IPs execution into a hardware sandbox and providing secure isolated regions.
+\section{THREAT MODEL} \label{sec:threat_model}
+
+This section describes the threat model for two use case scenarios our approach targets. We first look at the attack surface in FPGA-based embedded systems and then, we look at FPGA security concerns in cloud computing systems integrating FPGAs.
+
+\subsection{Embedded Systems}
+
+The illustration of our threat model in Figure \ref{fig:threat} shows the first use case scenario our approach targets. We assume an adversary who can introduce hardware trojans in the IPs during development (supply chain attack). We assume this adversary will later have a remote access to the FPGA system-on-chip (FPGA SoC) which contains some of the malicious IPs. We assume the adversary is aware of the trojans activation mechanisms and can only activate them externally by executing some malicious input for example.
+
+In FPGA-based SoCs, we do not current have hardware-level support mechanism that would prevent unauthorized bus data access by a bus component. We rely on bus protocols which generally assume that bus components are going to adhere to the protocol and wait for their turn to broadcast. However, this is not always the case since a malicious component can unilaterally decide to access the bus and launch a denial-of-service (DoS) attack for example to a system peripheral.
+
+
+
+\subsection{FPGAs in the Cloud}
+
+The fast adoption of FPGA accelerators in cloud computing and the probable future adoption in personal computers raise additional security concerns. Cloud providers such as Amazon that provide infrastructure as a service, must address security threats posed by malicious IPs residing on FPGA without affecting the performance of the system. In general, security is enforced in cloud computing using domain separation. User are assigned virtual instances (VIs) which are then scheduled on physical resource under by a hypervisor. The hypervisor controls the access to the hardware and insure that every virtual instance remain active within its limit. As shown on Figure \ref{fig:iaas-fpga}a), such an approach requires resource virtualization, for which no viable solution currently exist in FPGA. As a result, whole FPGAs must be assigned to small accelerators thus wasting resource , or the execution on the FPGA must be emulated in the hypervisor with performance degradation.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/CloudThreatModel.pdf}
+\caption{FPGA provisioning in IAAS-based cloud computers. FPGAs are virtualized in (a) and in (b), tenants are granted direct access to the FPGAs.}
+%\vspace{-6pt}
+\label{fig:iaas-fpga}
+\end{figure}
+
+An optimal use of FPGA resource would allow FPGA to be share among IPs, sometimes from different tenants for a better FPGA utilization without performance degradation. With several IPs on the same FPGA, there is currently no mechanism to guarantee that some IPs will not perform malicious activities, even in the presence of strong protocols. The classic approach to enable IPs on the FPGA is through registers directly controlled by the hypervisor (for the purpose of domain separation), and accessible to the corresponding instance (Figure \ref{fig:iaas-fpga}b). The problem here is that a trojan hidden into an IP can bypass protocol and place data on FPGA lines to cause harm. Since the connections are well known, nothing prevent an IP designer to tap long FPGA lines and read information from neighbor modules or to write on line randomly to DoS the design on the FPGA in cloud. As we will show in this tutorial, hardware isolation can address domain separation in hardware to provide an increase protection in the cloud.
 
 \section{HARDWARE ISOLATION MECHANISMS} \label{sec:problem_definition}
 
-This section discusses current techniques that are employed to enforce hardware isolation on FPGAs. This list is by no means exhaustive and it is beyond the scope of this paper to discuss these techniques in greater details. The interested reader is encouraged to refer to cited works. 
+ 
+Protection of sensitive data in networked and embedded systems has become a critical problem with far-reaching financial and societal implications. Among the 10 paradigms (Deception, Separation, Diversity,  Consistency, Depth, Discretion, Collection , Correlation, Awareness, Response)  used to address cybersecurity, separation is one of the most effective and relatively easy to implement and, thus increasingly used to address security, in particular in web application where security concerns have been the highest (\cite{Mello2015,  JonesCU, Fireglass2016, Cottrell2017}. The Google Chrome and Adobe have been successfully relying on isolation in the form of sandboxes (\cite{chromiumSB, adobeSB}) to isolate non-trusted code remotely provided to users for execution on their computers. Isolation has proved to be a very effective mechanism and could play a vital role in protection of malicious activities in hardware. The goal of this tutorial is therefore to provide users a tool for a seamless design and deployment of efficient hardware isolation techniques to address security concerns in FPGA-based systems.
 
+The remainder of this section discusses current techniques that are employed to enforce hardware isolation on FPGAs. This list is by no means exhaustive and it is beyond the scope of this paper to discuss these techniques in greater details. The interested reader is encouraged to refer to cited works.
 
 \subsection{Reference Monitors}
 
@@ -170,11 +193,11 @@ Both of these techniques follow a similar design flow. Systems components are de
 Authors in \cite{proofcarrying}, \cite{proof}, \cite{proofcar} observed that the above described techniques assume a ``trusted" reference monitor to enforce the security policies and with no mechanism through which the platform itself can authenticate the authority of the reference monitor before it administers an access policy decision. The security concern here is that an attacker could conduct a man-in-the-middle attack on the system by inserting a malicious circuit inside the only authority entrusted with administrating shared resource access decisions. To mitigate this, they proposed an improved implementation of the reference monitor which combines the monitoring approach with a ``proof-carrying hardware" concept. Their approach consisted of using a consumer-producer approach, where a consumer specifies a desired functionality of the memory access monitor and sends this specification to the producer and the producer synthesizes this information into a bitstream \cite{proofcarrying}. The producer re-extracts the logic function from this bitstream and, together with the original specification, computes some miter function (which outputs an error flag if the specification and implementation differ for at least one input vector) \cite{proof}. This proof of reference monitor correctness is then generated along side with the bitstream and is sent to the consumer. The latter verifies the proof, and in case of success partially reconfigures the monitor with security policies \cite{proof}. The consumer verifies the proof of correctness from the producer by extracting the monitor's logic function from the bitstream and forms a miter in conjunctive normal form in the same way as the producer, but with the original specification. This new miter is compared to the producer's miter and if they both match, the implementation is accepted and the monitor is accepted. The monitor is rejected if the the miters do not match \cite{proof}, \cite{proofcar}.
 
 
-\subsection{OS-Enforced Security: Zynq FPGA TrustZone}
+\subsection{Secure Enclave: Zynq FPGA TrustZone}
 
-In this approach, systems developers rely on an embedded operating system to provide system security services. Security features provided include, but are not limited to, confidentiality and integrity protection of the external memory containing the application code and data.
+In this approach, systems developers rely on an operating system and some hardware-level enforcement mechanisms to provide system security services. Security features provided include, but are not limited to, confidentiality and integrity protection of the external memory containing the sensitive application code and data.
 
-A recent example of this approach is the ARM TrustZone security architecture currently available to Zynq-7000 SoCs. In this example, the Xilinx Zynq-7000 processor system supports ARM TrustZone technology in both the PS and PL domain. The ARM TrustZone architecture makes trusted computing within the embedded world possible by establishing a trusted platform, a hardware architecture that extends the security infrastructure throughout the system design. Instead of protecting all assets in a single dedicated hardware block, the TrustZone architecture runs specific subsections of the system either in a ``normal world" or a ``secure world."
+A recent example of this approach is the ARM TrustZone security architecture currently available to Zynq-7000 SoC. The latter supports ARM TrustZone technology in both the PS and PL domain. The ARM TrustZone architecture makes trusted computing within the embedded world possible by establishing a trusted platform, a hardware architecture that extends the security infrastructure throughout the system design. Instead of protecting all assets in a single dedicated hardware block, the TrustZone architecture runs specific subsections of the system either in a ``normal world" or a ``secure world."
 
 In the Zynq-7000 AP SoC, a normal world is defined as a hardware subset consisting of memory regions, L2 cache regions, and specific AXI devices. The Zynq-7000 AP SoC supports ARM TrustZone technology in both the PS and PL domains of the device. The PS provides a set of configuration registers related to TrustZone support for custom IPs. These configuration registers are then dynamically programmed by the software during execution. All slave IP cores instantiated in the logic can be individually assigned a Secure or Non-Secure designation. For Xilinx slave IP cores, Secure/Non-Secure configuration can be statically designated at the AXI interconnect level during system creation process.
 
@@ -182,7 +205,7 @@ Figure \ref{fig:ted} shows a simplified example of how to secure your design sen
 
 \begin{figure}[hbt]
 \centering
-\includegraphics[width=1\columnwidth]{figures/TrustZoneHardware.pdf}
+\includegraphics[width=0.75\columnwidth]{figures/TrustZoneHardware.pdf}
 \caption{Improved Access Model Implementation.} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
 \label{fig:trustzone}
 \end{figure}
@@ -249,28 +272,25 @@ The hardware cores were implemented as Vivado IP cores and exposed by supplying 
 
 Our application was designed to include vulnerabilities that could be found in designs that include software processes and hardware accelerators handling sensitve information without security measures. An operating system lacking the ability to restrict executions on sensitive data to isolated processor environments and verify process permissions for secured memory space creates potential points of attack for malicious processes. With the hardware design community's growing adoption rate of third-party IP cores, there are a multitude of infiltration points within the development and manufacturing process with which malicious parties have been able to exploit. It should be noted that it is recognized the server/client handshake is missing vital components of a true TLS/SSL scheme such as certificate based verifications performed by both client and server. However, the scope of this work omits the undertaking of securing the network layer.
 
-To exploit the vulnerabilities mentioned, we have included a non-secure process and hardware trojan for the purpose of demonstration and providing a metric of system security strength.
+To exploit the vulnerabilities mentioned, we have included a non-secure process, a secure process, and  hardware trojans for the purpose of demonstration and providing a metric of system security strength.
 
 \subsubsection{Software Threat Insertion:}
-[SECTION ABOUT A NONSECURE PROCESS INTENDED TO ACCESS SENSITVE DATA]
+For the purpose of this tutorial, we wrote a (non-secure) process thread as part of our application software to randomly read memory regions associated with cryptographic functions keys management code variables and data structures (secure code) . The non-secure process conducts unauthorized code injection on these privileged locations and tries to gain privileged secure execution status (privilege escalation attack).  
 
 
 \subsubsection{Hardware Threat Insertion:}
 
-Our encryption engine is a prime candidate for inserting a malicious circuit as it will have access to sensitive encryption key data. As our application performs a simple handshake and utilizes both AES and RSA algorithms, we can leverage the Trust-hub.org repository of hardware trojans for AES128 and BasicRSA.
-
-Both AES128 and Basic RSA trojan classes contain variations of activation methods, from always-on trojans to internal condition triggers. We chose the following trojans...
-
+Our encryption engine is a prime candidate for inserting a malicious circuit as it will have access to sensitive encryption key data. As our application performs a simple handshake and utilizes both AES and RSA algorithms, we can leverage the Trust-hub.org repository of hardware trojans for AES128 and BasicRSA. Both AES128 and Basic RSA trojan classes contain variations of activation methods, from always-on trojans to internal condition triggers. We chose the following trojans...
 
 \subsection{Adressing Vulnerabilities with Isolation}
 An accepted paradigm of security for our proposed system would require secure execution for sensitive computations with dedicated hardware resources that are deemed secure. We address the system vulnerabilities as follows:
 
-
 \subsubsection{Reference Monitor and TrustZone:}
-[FESTUS]
+We assume no a priori knowledge of specific vulnerabilities within the application code running on the FPGA SoC. All we know is that we are tasked to provide a secure implementation of the application. TrustZone provides us with the ability to create memory regions that are isolated from all other code in the system (including privileged code such as OS kernel). Depending on the size of the code that's going to execute in this secure regions, we may have to segment these memory regions into smaller segments whose utilization and access permissions can be tracked through a hardware-implemented reference monitor. Segmenting these isolated secure regions is important since it allows us to create a tiered trust model in our system. This way we can guarantee confidentiality of our application software most sensitive data (cryptographic keys) by isolating it from all privileged code. 
+
 
 \subsubsection{Hardware Sandboxing:}
-The protections put in place with HACLs and Trustzone are limited as they do not consider malicious hardware components interacting with secure processes. Though the process execution environment may be secured with relevant memory blocks protected, an assumed-secure IP core could house a malicious hardware trojan.
+The protections put in place with reference monitors and Trustzone are limited as they do not consider malicious hardware components interacting with secure processes. Though the process execution environment may be secured with relevant memory blocks protected, an assumed-secure IP core could house a malicious hardware trojan.
 
 To complement the methods discussed for secure process execution, we propose the use of CAPSL to extend policy-driven and isolation-based security to the programmable logic of an SoC. We have addressed all components of our demo systems with the exception of our cryptographic hardware cores. With the security-critical server/client processes utilizing hardware cores, it is essential that the IP are behaving as expected. Hardware sandboxing provides a way to safely integrate nontrusted IP into a secure system. By securing the cores within a sandbox, we are able to monitor all nontrusted IP interface interactions and isolate unexpected interctions with secured resources.
 
@@ -279,26 +299,30 @@ To complement the methods discussed for secure process execution, we propose the
 
 
 \section{IMPLEMENTING ISOLATION} \label{sec:Implementation}
-In this section, we discuss implementation details reagrding the steps of applying the isolation methods.
+In this section, we discuss implementation details regarding the steps of applying the isolation methods.
 
-\subsection{Reference Monitor}
+\subsection{Software Level}
 
-\subsection{TrustZone}
+\subsubsection{TrustZone}
 
-\subsection{CAPSL}
+\subsubsection{Reference Monitor}
+
+\subsection{Hardware Level}
+
+\subsubsection{CAPSL}
 
 As discussed in Section \ref{sec:CAPSL}, the CAPSL design flow requires specifications for nontrusted IP (Cryptographic cores) purposed for defining interface connections and behavior. The IP models resulting from specification are then subjected to an optimization phase. The collection of models are translated to a reference monitor implementation following optimization. The final output is an implementation of the hardware sandbox packaged as an IP.
 
-\subsubsection{IP Specification:}
+\paragraph{IP Specification:}
 
-To utilize CAPSL's sandbox generation process, we must define the IP we wish to include. Due to the underlying modelling of the untrusted IP, specification at the interface level, or any abstraction of this, is required. That is, specification might contain partial interface defintions and/or behaviors abstracted through additonal computation logic. The specification files for AES and RSA cores are explained in Figure [RSA AND AES SPEC FILES EXPLANATION DIAGRAM].
+To utilize CAPSL's sandbox generation process, we must define the IP we wish to include. Due to the underlying modeling of the untrusted IP, specification at the interface level, or any abstraction of this, is required. That is, specification might contain partial interface defintions and/or behaviors abstracted through additonal computation logic. The specification files for AES and RSA cores are explained in Figure [RSA AND AES SPEC FILES EXPLANATION DIAGRAM].
 
 Along with the required interface layout definition, the specifications for both AES and RSA utilize SERE statements in conjunction with addition computational logic to provide explicitly denied interactions. More specifically, the specifications are utilizing additonal logic for abstracting the SERE specifications for detecting known trojan triggers. The RSA specification also utilizes the IA-based description of allowed behavior to define how the IP shares its current state.
 
 
-\subsubsection{Model Optimization:}
+\paragraph{Optimization:}
 
-\subsubsection{Sandbox Generation:}
+\paragraph{Sandbox Generation:}
 
 
 

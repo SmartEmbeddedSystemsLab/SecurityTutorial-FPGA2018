@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350) (preloaded format=pdflatex 2017.8.24)  21 SEP 2017 20:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350) (preloaded format=pdflatex 2017.8.24)  22 SEP 2017 20:31
 entering extended mode
 **./FPGA2018.tex
 (FPGA2018.tex
@@ -1229,38 +1229,48 @@ bertineT-TLF/m/n/9 ˆ\OT1/LinuxLibertineT-TLF/b/n/9 Hardware \TS1/LinuxLibertine
 T-TLF/m/n/9 \OT1/LinuxLibertineT-TLF/b/n/9 Reconfigurable
  []
 
-<figures/ThreatModel.pdf, id=79, 282.05376pt x 271.0125pt>
+<figures/ThreatModel.pdf, id=84, 266.9975pt x 252.945pt>
 File: figures/ThreatModel.pdf Graphic file (type pdf)
 
 <use figures/ThreatModel.pdf>
-Package pdftex.def Info: figures/ThreatModel.pdf used on input line 130.
-(pdftex.def)             Requested size: 120.57375pt x 115.8549pt.
+Package pdftex.def Info: figures/ThreatModel.pdf used on input line 127.
+(pdftex.def)             Requested size: 120.57375pt x 114.22945pt.
+
+Underfull \vbox (badness 1286) has occurred while \output is active []
+
  [1.1
 Non-PDF special ignored!{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
  <./figures/ThreatModel.pdf>]
-<figures/ted_access.pdf, id=103, 323.2075pt x 252.945pt>
+<figures/CloudThreatModel.pdf, id=105, 546.04pt x 184.69pt>
+File: figures/CloudThreatModel.pdf Graphic file (type pdf)
+
+<use figures/CloudThreatModel.pdf>
+Package pdftex.def Info: figures/CloudThreatModel.pdf used on input line 150.
+(pdftex.def)             Requested size: 227.83119pt x 77.05917pt.
+ [2.2 <./figures/CloudThreatModel.pdf>]
+<figures/ted_access.pdf, id=134, 323.2075pt x 252.945pt>
 File: figures/ted_access.pdf Graphic file (type pdf)
 
 <use figures/ted_access.pdf>
-Package pdftex.def Info: figures/ted_access.pdf used on input line 152.
+Package pdftex.def Info: figures/ted_access.pdf used on input line 175.
 (pdftex.def)             Requested size: 180.86061pt x 141.54402pt.
 
-<figures/access.pdf, id=107, 505.89pt x 276.03125pt>
+<figures/access.pdf, id=138, 505.89pt x 276.03125pt>
 File: figures/access.pdf Graphic file (type pdf)
  <use figures/access.pdf>
-Package pdftex.def Info: figures/access.pdf used on input line 163.
+Package pdftex.def Info: figures/access.pdf used on input line 186.
 (pdftex.def)             Requested size: 241.14749pt x 131.5795pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2.2 <./figures/ted_access.pdf> <./figures/access.pdf>]
-<figures/TrustZoneHardware.pdf, id=178, 391.4625pt x 283.0575pt>
+ [3.3 <./figures/ted_access.pdf> <./figures/access.pdf>]
+<figures/TrustZoneHardware.pdf, id=207, 391.4625pt x 283.0575pt>
 File: figures/TrustZoneHardware.pdf Graphic file (type pdf)
 
 <use figures/TrustZoneHardware.pdf>
-Package pdftex.def Info: figures/TrustZoneHardware.pdf used on input line 185.
-(pdftex.def)             Requested size: 241.14749pt x 174.37085pt.
+Package pdftex.def Info: figures/TrustZoneHardware.pdf used on input line 208.
+(pdftex.def)             Requested size: 180.86061pt x 130.77814pt.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -1268,56 +1278,91 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (3.18202pt too wide) in paragraph at lines 195--197
+Overfull \hbox (3.18202pt too wide) in paragraph at lines 218--220
 []\OT1/LinuxLibertineT-TLF/b/n/9 Non-Secure Cus-tom IP: \OT1/LinuxLibertineT-TL
 F/m/n/9 (-20) This is used to per-form read/write
  []
 
-
-Underfull \vbox (badness 2409) has occurred while \output is active []
-
- [3.3 <./figures/TrustZoneHardware.pdf>]
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 212.
+(Font)              scaled to size 9.0pt on input line 235.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 212.
+(Font)              scaled to size 9.0pt on input line 235.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 216.
+(Font)              scaled to size 9.0pt on input line 239.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4.4]
-Underfull \vbox (badness 5771) has occurred while \output is active []
+ [4.4 <./figures/TrustZoneHardware.pdf>]
+Underfull \vbox (badness 2671) has occurred while \output is active []
 
  [5.5]
-(FPGA2018.bbl) [6.6
+[6.6] (FPGA2018.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 71--79
+[]\OT1/LinuxLibertineT-TLF/m/n/7 (+20) Chromium Blog. 2008.  A new ap-proach to
+ browser se-cu-rity:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--79
+\OT1/LinuxLibertineT-TLF/m/n/7 (+20) the Google Chrome Sand-box.  []$h‹ps : / /
+ blog . chromium . org / 2008 / 10 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--137
+[]\OT1/LinuxLibertineT-TLF/m/n/7 (+20) Lance Cot-trell. 2017.  Iso-la-tion Tech
+-nol-ogy Pro-tects Against
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--137
+\OT1/LinuxLibertineT-TLF/m/n/7 (+20) Risky Cy-beren-vi-ron-ments.  []$h‹ps : / 
+/ ntrepidcorp . com / cyber-[]security /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--137
+\OT1/LinuxLibertineT-TLF/m/n/7 (+20) isolation-[]technology-[]protects-[]agains
+t-[]risky-[]cyberenvironments/$[]. (Feb
+ []
+
+
+Underfull \hbox (badness 4531) in paragraph at lines 247--254
+[]\OT1/LinuxLibertineT-TLF/m/n/7 (+20) Franklyn Jones.  Cy-ber Se-cu-rity for C
+redit Unions: Man-ag-ing the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--254
+\OT1/LinuxLibertineT-TLF/m/n/7 (+20) Unique Chal-lenges.  []$h‹ps : / / www . b
+ankinfosecurity . com / webinars /
+ []
+
+) [7.7
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 473.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 473.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 497.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 497.
  (FPGA2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 473.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 473.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 497.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 497.
 Package rerunfilecheck Info: File `FPGA2018.out' has not changed.
-(rerunfilecheck)             Checksum: 410B12FD80F1F4E02E88EDBBDA5EBF56;2991.
+(rerunfilecheck)             Checksum: C5D49BA5E08A23B991AD3AD8BC2958BE;3213.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 473.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 497.
  ) 
 Here is how much of TeX's memory you used:
- 17802 strings out of 493323
- 265535 string characters out of 3139063
- 377992 words of memory out of 3000000
- 20586 multiletter control sequences out of 15000+200000
- 64035 words of font info for 241 fonts, out of 3000000 for 9000
+ 17858 strings out of 493323
+ 266602 string characters out of 3139063
+ 381591 words of memory out of 3000000
+ 20616 multiletter control sequences out of 15000+200000
+ 65335 words of font info for 249 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,11n,94p,2008b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,11n,94p,2008b,395s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_edcawa.enc}{C:/Pr
 ogram Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_kijugd.enc}{C:/Program Fi
 les/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Program Files/MiKT
@@ -1329,9 +1374,9 @@ lic/libertine/LinLibertineT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /libertine/LinLibertineTB.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
 ibertine/LinLibertineTI.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/new
 tx/txsys.pfb>
-Output written on FPGA2018.pdf (6 pages, 599824 bytes).
+Output written on FPGA2018.pdf (7 pages, 634863 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 50 named destinations out of 1000 (max. 500000)
- 29853 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 309 PDF objects out of 1000 (max. 8388607)
+ 63 named destinations out of 1000 (max. 500000)
+ 29866 words of extra memory for PDF output out of 35830 (max. 10000000)
 

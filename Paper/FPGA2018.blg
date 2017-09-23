@@ -1,6 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: FPGA2018.aux
 The style file: ACM-Reference-Format.bst
 Database file #1: FPGA2018.bib
+Warning--empty year in adobeSB
 Warning--empty publisher in CapslHOST
 Warning--empty address in CapslHOST
 Warning--no number and no volume in Byma2014FPGAsIT
@@ -12,6 +13,7 @@ Warning--empty publisher in FestusFCCM
 Warning--empty address in FestusFCCM
 Warning--empty publisher in SPHuffmire
 Warning--empty address in SPHuffmire
+Warning--empty year in JonesCU
 Warning--empty publisher in proof
 Warning--empty address in proof
-(There were 13 warnings)
+(There were 15 warnings)
