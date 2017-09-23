@@ -37,6 +37,14 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
+\bibitem[\protect\citeauthoryear{Amazon}{Amazon}{2017}]%
+        {amazon}
+\bibfield{author}{\bibinfo{person}{Amazon}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{Amazon EC2 F1 Instances}.
+\newblock   (\bibinfo{year}{2017}).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Arnautov, Trach, Gregor, Knauth, Martin,
   Priebe, Lind, Muthukumaran, O{\textquoteright}Keeffe, Stillwell, Goltzsche,
   Eyers, Kapitza, Pietzuch, and Fetzer}{Arnautov et~al\mbox{.}}{2016}]%
@@ -55,6 +63,23 @@
   Association}, \bibinfo{address}{GA}, \bibinfo{pages}{689--703}.
 \newblock
 \showISBNx{978-1-931971-33-1}
+
+
+\bibitem[\protect\citeauthoryear{Basak, Bhunia, and Ray}{Basak
+  et~al\mbox{.}}{2015}]%
+        {referencem}
+\bibfield{author}{\bibinfo{person}{Abhishek Basak}, \bibinfo{person}{Swarup
+  Bhunia}, {and} \bibinfo{person}{Sandip Ray}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{A Flexible Architecture for Systematic
+  Implementation of SoC Security Policies}. In \bibinfo{booktitle}{{\em
+  Proceedings of the IEEE/ACM International Conference on Computer-Aided
+  Design}} {\em (\bibinfo{series}{ICCAD '15})}. \bibinfo{publisher}{IEEE
+  Press}, \bibinfo{address}{Piscataway, NJ, USA}, \bibinfo{pages}{536--543}.
+\newblock
+\showISBNx{978-1-4673-8389-9}
+\showURL{%
+\url{http://dl.acm.org/citation.cfm?id=2840819.2840894}}
 
 
 \bibitem[\protect\citeauthoryear{Blog}{Blog}{}]%
@@ -269,6 +294,14 @@
 \url{https://doi.org/10.1109/SP.2007.28}}
 
 
+\bibitem[\protect\citeauthoryear{Intel}{Intel}{2017}]%
+        {intel}
+\bibfield{author}{\bibinfo{person}{Intel}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{Report: Intel Inside New Audi Autonomous Car System}.
+\newblock   (\bibinfo{year}{2017}).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Jones}{Jones}{}]%
         {JonesCU}
 \bibfield{author}{\bibinfo{person}{Franklyn Jones}.}
@@ -290,6 +323,18 @@
   \bibinfo{howpublished}{\url{http://www.technewsworld.com/story/82245.html}}.
    (\bibinfo{date}{July} \bibinfo{year}{2015}).
 \newblock
+
+
+\bibitem[\protect\citeauthoryear{Ray and Jin}{Ray and Jin}{2015}]%
+        {secpoliciies}
+\bibfield{author}{\bibinfo{person}{S. Ray} {and} \bibinfo{person}{Y. Jin}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Security policy enforcement in modern SoC designs}.
+  In \bibinfo{booktitle}{{\em 2015 IEEE/ACM International Conference on
+  Computer-Aided Design (ICCAD)}}. \bibinfo{pages}{345--350}.
+\newblock
+\showDOI{%
+\url{https://doi.org/10.1109/ICCAD.2015.7372590}}
 
 
 \bibitem[\protect\citeauthoryear{Whitaker and Bobda}{Whitaker and
@@ -318,6 +363,32 @@
 \newblock
 \showDOI{%
 \url{https://doi.org/10.1109/FPT.2014.7082771}}
+
+
+\bibitem[\protect\citeauthoryear{Xilinx}{Xilinx}{2014a}]%
+        {petalinux}
+\bibfield{author}{\bibinfo{person}{Xilinx}.} \bibinfo{year}{2014}\natexlab{a}.
+\newblock \bibinfo{title}{PetaLinux Getting Started}.
+\newblock   (\bibinfo{year}{2014}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Xilinx}{Xilinx}{2014b}]%
+        {xilinxprotrust}
+\bibfield{author}{\bibinfo{person}{Xilinx}.} \bibinfo{year}{2014}\natexlab{b}.
+\newblock \bibinfo{title}{Programming ARM TrustZone Architecture on the Xilinx
+  Zynq-7000 All Programmable SoCs}.
+\newblock   (\bibinfo{year}{2014}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Xilinx}{Xilinx}{2014c}]%
+        {xilinxtrust}
+\bibfield{author}{\bibinfo{person}{Xilinx}.} \bibinfo{year}{2014}\natexlab{c}.
+\newblock \bibinfo{title}{TrustZone Technology Support in Zynq-7000 All
+  Programmable SoCs}.
+\newblock   (\bibinfo{year}{2014}).
+\newblock
 
 
 \end{thebibliography}
