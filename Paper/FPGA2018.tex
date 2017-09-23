@@ -149,7 +149,8 @@ The remainder of this work is organized as follow: Section \ref{sec:threat_model
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\columnwidth]{figures/ThreatModel.pdf}
-\caption{Embedded system threat model: The adversary controls the FPGA SoC and can execute malicious code (non-trusted application + accelerator in red) remotely and launch a denial-of-service attack to an IO component.}
+\caption{Embedded system threat model}
+\textit{The adversary controls the FPGA SoC and can execute malicious code (non-trusted application + accelerators in red) remotely and launch a denial-of-service attack to an IO component.}
 \label{fig:threat}
 \end{figure}
 
@@ -172,7 +173,8 @@ The fast adoption of FPGA accelerators in cloud computing and the probable futur
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.45\textwidth]{figures/CloudThreatModel.pdf}
-\caption{FPGA provisioning in IAAS-based cloud computers. FPGAs are virtualized in (a) and in (b), tenants are granted direct access to the FPGAs.}
+\caption{FPGA Provisioning in IAAS-based Cloud Computers}
+\textit{FPGAs are virtualized in (a) and in (b), tenants are granted direct access to the FPGAs.}
 %\vspace{-6pt}
 \label{fig:iaas-fpga}
 \end{figure}
@@ -196,7 +198,8 @@ There are many research efforts with some relation to this approach, but to the 
 \begin{figure}[hbt]
 \centering
 \includegraphics[width=0.75\columnwidth]{figures/ted_access.pdf}
-\caption{Access Model Implementation. On the left, there's no "caching" mechanism. On the right, a buffer is used to hold the data while access rights are being looked up.} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+\caption{Access Model Implementation}
+\textit{On the left, there's no "caching" mechanism. On the right, a buffer is used to hold the data while access rights are being looked up.} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
 \label{fig:ted}
 \end{figure}
 
@@ -315,7 +318,50 @@ For the purpose of this tutorial, we wrote a (non-secure) process thread as part
 
 \subsubsection{Hardware Threat Insertion:}
 
-Our encryption engine is a prime candidate for inserting a malicious circuit as it will have access to sensitive encryption key data. As our application performs a simple handshake and utilizes both AES and RSA algorithms, we can leverage the Trust-Hub.org repository of hardware trojans for AES128 and BasicRSA. Both AES128 and BasicRSA trojan classes contain variations of activation methods, from always-on trojans to internal condition triggers. We sample the set of available AES128 and BasicRSA trojans and select the variations shown in in Table [SMALL TABLE OF TROJANS]. This subset provides our demo system with a range of malicious behaviors originating from hardware circuits that are typically difficult to detect without the application of some security methods.
+Our encryption engine is a prime candidate for inserting a malicious circuit as it will have access to sensitive encryption key data. As our application performs a simple handshake and utilizes both AES and RSA algorithms, we can leverage the Trust-Hub.org repository of hardware trojans for AES128 and BasicRSA. Both AES128 and BasicRSA trojan classes contain variations of activation methods, from always-on trojans to internal condition triggers. We sample the set of available AES128 and BasicRSA trojans and select the variations shown in in Table \ref{tab:ThreatModelTable}. This subset provides our demo system with a range of malicious behaviors originating from hardware circuits that are typically difficult to detect without the application of some security methods.
+
+\begin{table}[H]\vspace*{-0.2cm}
+    %\caption{Global caption}
+    \begin{minipage}{\linewidth}
+		\renewcommand{\arraystretch}{1.5}
+		\caption{Attributes of Trust-Hub Trojan Subset}
+		\label{tab:ThreatModelTable}
+		\centering
+		% Some packages, such as MDW tools, offer better commands for making tables
+		% than the plain LaTeX2e tabular which is used here.
+		\begin{center}\vspace*{-0.2cm}
+		\scalebox{0.6}{
+		\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{Design} & \textbf{Trojan Class} & \textbf{Activated?} & \textbf{Trigger} & \textbf{Effect} \\
+		\midrule
+		\hline
+		AES-T400        & Info Leak   & Yes         & Input Value             & Key Leak via AM Transmission\\
+		\hline
+		AES-T500        & DoS         & Yes         & Input Sequence          & Power Draw Increase\\
+		\hline
+    AES-T600        & Info Leak   & Yes         & Input Value             & Key Leak via Side Channels\\
+    \hline
+    AES-T700        & Info Leak   & Yes         & Input Value             & Key Leak via Side Channels\\
+    \hline
+    AES-T800        & Info Leak   & Yes         & Input Sequence          & Key Leak via Side Channels\\
+    \hline
+    AES-T900        & Info Leak   & Yes         & Internal Counter        & Key Leak via Side Channels\\
+    \hline
+    AES-T1000       & Info Leak   & Yes         & Input Value             & Key Leak via Side Channels\\
+    \hline
+		BasicRSA-T100   & Info Leak   & Yes         & Input Value             & Key Leak via Protocol\\
+		\hline
+		BasicRSA-T200   & Info Leak   & Yes         & Input Value             & Data Leak via Protocol\\
+		\hline
+    BasicRSA-T300   & Info Leak   & Yes         & Internal Counter        & Key Leak via Protocol\\
+		\hline
+    BasicRSA-T400   & DoS         & Yes         & Internal Counter        & Data Leak via Protocol\\
+		\hline
+		\end{tabular}}
+		\end{center}
+		\end{minipage}
+\end{table}
 
 \subsection{Adressing Vulnerabilities with Isolation}
 \subsubsection{Reference Monitor and TrustZone:}
@@ -345,11 +391,7 @@ In this section, we discuss implementation details reagrding the steps of applyi
 
 To discuss the implementation in a meaningful way, we discuss each of the isolation methods in the order they would appear in a bottom-up system development process. We begin with isolating the cryptographic acceleators in hardware and proceed to configuring a secure execution environment. With our secure process utilizing hardware-accelerated encryption, CAPSL is utilized to secure the encryption engine and enforce the integrity of its behavior. This system suits the implementation of the discussed isolation methods with the inclusion of points of attack in both software and hardware.
 
-\subsection{Software Level}
 
-\subsubsection{TrustZone}
-
-\subsubsection{Reference Monitor}
 
 \subsection{Hardware Level}
 
@@ -369,7 +411,7 @@ Implementing a hardware sandbox for our demo system requires the specification o
 %\centering
 \begin{lstlisting}
 // AES128.config - CAPSL Configuration File
-//    IP Targets: Trust-Hub AES Trojans T300, T400, T500, T600, T700, T800, T900, T1000
+//    IP Targets: Trust-Hub AES Trojans T400, T500, T600, T700, T800, T900, T1000
 AES.def{ // AES 128 Interface Layout and Expected Interactions
   reset        : input,
   key          : input-vector(AESKeySize),
@@ -420,7 +462,7 @@ I think we use Petalinux still even with TRustzone?? Whatever we do, mention it 
 \begin{lstlisting}
 // BasicRSA.config - CAPSL Configuration File
 //    IP Targets: Trust-Hub BasicRSA Trojans T100, T200, T300, T400
-BasicRSA.def{ // AES 128 Interface Layout and Expected Interactions
+BasicRSA.def{ // Basic RSA Interface Layout and Expected Interactions
   ds           : input,
   ready        : input,
   reset        : input,
@@ -460,10 +502,11 @@ logic.def{
 \end{figure}
 
 
-\subsection{ARM TrustZone}
+\subsection{Software Level}
 
+\subsubsection{TrustZone}
 
-\subsection{Reference Monitor}
+\subsubsection{Reference Monitor}
 
 
 \section{Conclusion} \label{sec:conclusion}
