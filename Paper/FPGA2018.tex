@@ -142,13 +142,9 @@ Many of today's critical embedded systems are increasingly relying on FPGA-based
 
 This increased adoption of FPGA into commercial scale cloud computing systems has highlighted the issue of FPGA's lack of hardware primitives, conceptually similar from a security perspective to a CPU's IO memory management unit (IOMMU), to support multi-tenancy while enforcing proper domain separation among the tenants (i.e. multiple applications utilizing the same FPGA) \cite{CloudFPGA}, \cite{CapslHOST}, \cite{Byma2014FPGAsIT}. This lack of native support for isolation creates security concerns where: 1) Since FPGA accelerators tend to run with full hardware access, a single accelerator vulnerabilities can be exploited through traditional system software stacks or if malicious, can bring down a shared compute host \cite{CloudFPGA}. Or 2) tenants are not able to protect confidentiality and integrity of their application  data not only from other tenants, but also from other unauthorized parties including privileged system software, such as the hypervisor \cite{sconee}.
 
-An effective solution to the problem of lack of proper domain separation on FPGAs should be able to enable scaling of security across a range of system parameters, such as power and performance, without significant drop in coverage. We believe and intend to demonstrate in this tutorial that this can only be achieved through some form of combination of measures that protect against hardware vulnerabilities directly at the hardware level and measures that enforce domain separation at the software level.In this tutorial, we look at a set of  research works that individually attempted to address the problem of lack of isolation support on FPGAs. We demonstrate how certain elements of these works can be put together to provide an effective and comprehensive solution to this problem. We demonstrate the viability of this solution through a real-world software-hardware codesign application which implements a simple TSL/SSL encryption. 
+An effective solution to the problem of lack of proper domain separation on FPGAs should be able to enable scaling of security across a range of system parameters, such as power and performance, without significant drop in coverage. We believe and intend to demonstrate in this tutorial that this can only be achieved through some form of combination of measures that protect against hardware vulnerabilities directly at the hardware level and measures that enforce domain separation at the software level.In this tutorial, we look at a set of  research works that individually attempted to address the problem of lack of isolation support on FPGAs. We demonstrate how certain elements of these works can be put together to provide an effective and comprehensive solution to this problem. We demonstrate the viability of this solution through a real-world software-hardware codesign application which implements a simple TSL/SSL encryption.
 
-<<<<<<< HEAD
-In this paper, we look at a set of  research works that individually attempted to address the problem of lack of isolation support on FPGAs. We demonstrate how certain elements of these works can be put together to provide an effective and comprehensive solution to this problem. Through a tutorial, we demonstrate the viability of this solution through a real-world software-hardware codesign application which implements a simple TSL/SSL encryption application. The remainder of this paper is organized as follow: Section \ref{sec:threat_model} starts by describing the specific use case scenarios and security concerns this method addresses. Section \ref{sec:problem_definition} gives an overview of research works that form the basis of our comprehensive solution. Section \ref{sec:application} and Section \ref{sec:Implementation} conclude the paper with a tutorial demonstrating how a combination of the discussed approaches can be used to provide proper domain isolation on FPGA platform.
-=======
 The remainder of this work is organized as follow: Section \ref{sec:threat_model} starts by describing the specific use case scenarios and security concerns this method addresses. Section \ref{sec:problem_definition} gives an overview of research works that form the basis of our comprehensive solution. Section \ref{sec:application} and Section \ref{sec:Implementation} conclude the paper with a tutorial demonstrating how a combination of the discussed approaches can be used to provide proper domain isolation on FPGA platform.
->>>>>>> master
 
 \begin{figure}[h]
 \centering
@@ -185,12 +181,7 @@ An optimal use of FPGA resource would allow FPGA to be share among IPs, sometime
 
 \section{HARDWARE ISOLATION MECHANISMS} \label{sec:problem_definition}
 
-<<<<<<< HEAD
-This section discusses current techniques that are employed to enforce hardware isolation on FPGAs. This list is by no means exhaustive and it is beyond the scope of this paper to discuss these techniques in greater details. The interested reader is encouraged to refer to cited works.
-=======
- 
 Protection of sensitive data in networked and embedded systems has become a critical problem with far-reaching financial and societal implications. Among the 10 paradigms (Deception, Separation, Diversity,  Consistency, Depth, Discretion, Collection , Correlation, Awareness, Response)  used to address cybersecurity, separation is one of the most effective and relatively easy to implement and, thus increasingly used to address security, in particular in web application where security concerns have been the highest (\cite{Mello2015,  JonesCU, Fireglass2016, Cottrell2017}. The Google Chrome and Adobe have been successfully relying on isolation in the form of sandboxes (\cite{chromiumSB, adobeSB}) to isolate non-trusted code remotely provided to users for execution on their computers. Isolation has proved to be a very effective mechanism and could play a vital role in protection of malicious activities in hardware. The goal of this tutorial is therefore to provide users a tool for a seamless design and deployment of efficient hardware isolation techniques to address security concerns in FPGA-based systems.
->>>>>>> master
 
 The remainder of this section discusses current techniques that are employed to enforce hardware isolation on FPGAs. This list is by no means exhaustive and it is beyond the scope of this paper to discuss these techniques in greater details. The interested reader is encouraged to refer to cited works.
 
@@ -199,7 +190,7 @@ The remainder of this section discusses current techniques that are employed to 
 In this approach, a hardware module or a microcontroller based firmware-upgradable module is used to monitor and enforce authorized sharing of system
 resources among cores. Memory-access security policies are expressed in a specialized language, and a compiler translates these policies directly to a circuit (or a microcontroller) that enforces the policies. The circuit is then loaded onto the FPGA along with other components of the system.
 
-There are many research efforts with some relation to this approach, but to the best of our current knowledge, works in \cite{HuffEmbedded} and in \cite{Huffmire} are the only work with similar goals that come close to ours here. In their work, they designed and implemented a reconfigurable reference monitor (RM) which implements an access control list (ACL). They then integrated the reference monitor into the on-chip peripheral bus (OPB) and used it to regulate access to the memory and peripherals. Memory and peripherals accesses go through a reconfigurable monitor's access control list [3]. The access control list associates every object (memory ranges for ex.) in the system with a list of principals (IP cores) with the rights of each principal to access the object[3]. In their implementation, each object access has to be computed by the reference monitor's ACL at runtime. The decision is either granted access or denied access. Since this access model can create potential memory performance issues in large memory applications, they proposed a mechanism in which a buffer is used to hold the data until the ACL grants approval of the legality of the request \cite{SPHuffmire}. Figure ~\ref{fig:ted} illustrates the implementation.For example, in case of a write, the data to be written is stored in the buffer until the ACL grants the approval, at which time the write request is sent to the memory \cite{SPHuffmire}.
+There are many research efforts with some relation to this approach, but to the best of our current knowledge, works in \cite{HuffEmbedded} and in \cite{Huffmire} are the only work with similar goals that come close to ours here. In their work, they designed and implemented a reconfigurable reference monitor (RM) which implements an access control list (ACL). They then integrated the reference monitor into the on-chip peripheral bus (OPB) and used it to regulate access to the memory and peripherals. Memory and peripherals accesses go through a reconfigurable monitor's access control list [3]. The access control list associates every object (memory ranges for ex.) in the system with a list of principals (IP cores) with the rights of each principal to access the object[3]. In their implementation, each object access has to be computed by the reference monitor's ACL at runtime. The decision is either granted access or denied access. Since this access model can create potential memory performance issues in large memory applications, they proposed a mechanism in which a buffer is used to hold the data until the ACL grants approval of the legality of the request \cite{SPHuffmire}. Figure \ref{fig:ted} illustrates the implementation. For example, in case of a write, the data to be written is stored in the buffer until the ACL grants the approval, at which time the write request is sent to the memory \cite{SPHuffmire}.
 
 
 \begin{figure}[hbt]
@@ -313,44 +304,27 @@ The hardware cores were implemented as Vivado IP cores and exposed by supplying 
 
 Our application was designed to include vulnerabilities that could be found in designs that include software processes and hardware accelerators handling sensitve information without security measures. An operating system lacking the ability to restrict executions on sensitive data to isolated processor environments and verify process permissions for secured memory space creates potential points of attack for malicious processes. With the hardware design community's growing adoption rate of third-party IP cores, there are a multitude of infiltration points within the development and manufacturing process with which malicious parties have been able to exploit.
 
-<<<<<<< HEAD
 [General Vulnerability Descriptions?]
 
 
 To exploit the vulnerabilities mentioned, we have included a non-secure process and hardware trojan for the purpose of demonstration and providing a metric of system security strength. It should be noted that it is recognized the server/client handshake is missing vital components of a true TLS/SSL scheme such as certificate based verifications performed by both client and server. However, the scope of this work omits the undertaking of securing the network layer.
 
 \subsubsection{Software Threat Insertion:}
-[SECTION ABOUT A NONSECURE PROCESS INTENDED TO ACCESS SENSITVE DATA]
-
-We have implemented a simple C program to run alongside the echo server. It attempts to access the memory of the server process to access the sensitive keys it manages. In addition, we can attempt the access of driver memory space to read and write to the hardware accelerators.
-=======
-To exploit the vulnerabilities mentioned, we have included a non-secure process, a secure process, and  hardware trojans for the purpose of demonstration and providing a metric of system security strength.
-
-\subsubsection{Software Threat Insertion:}
-For the purpose of this tutorial, we wrote a (non-secure) process thread as part of our application software to randomly read memory regions associated with cryptographic functions keys management code variables and data structures (secure code) . The non-secure process conducts unauthorized code injection on these privileged locations and tries to gain privileged secure execution status (privilege escalation attack).  
+For the purpose of this tutorial, we wrote a (non-secure) process thread as part of our application software to randomly read memory regions associated with cryptographic functions keys management code variables and data structures (secure code) . The non-secure process conducts unauthorized code injection on these privileged locations and tries to gain privileged secure execution status (privilege escalation attack).
 
 
-\subsubsection{Hardware Threat Insertion:}
-
-Our encryption engine is a prime candidate for inserting a malicious circuit as it will have access to sensitive encryption key data. As our application performs a simple handshake and utilizes both AES and RSA algorithms, we can leverage the Trust-hub.org repository of hardware trojans for AES128 and BasicRSA. Both AES128 and Basic RSA trojan classes contain variations of activation methods, from always-on trojans to internal condition triggers. We chose the following trojans...
->>>>>>> master
-
-
-<<<<<<< HEAD
 \subsubsection{Hardware Threat Insertion:}
 
 Our encryption engine is a prime candidate for inserting a malicious circuit as it will have access to sensitive encryption key data. As our application performs a simple handshake and utilizes both AES and RSA algorithms, we can leverage the Trust-Hub.org repository of hardware trojans for AES128 and BasicRSA. Both AES128 and BasicRSA trojan classes contain variations of activation methods, from always-on trojans to internal condition triggers. We sample the set of available AES128 and BasicRSA trojans and select the variations shown in in Table [SMALL TABLE OF TROJANS]. This subset provides our demo system with a range of malicious behaviors originating from hardware circuits that are typically difficult to detect without the application of some security methods.
 
-=======
+\subsection{Adressing Vulnerabilities with Isolation}
 \subsubsection{Reference Monitor and TrustZone:}
-We assume no a priori knowledge of specific vulnerabilities within the application code running on the FPGA SoC. All we know is that we are tasked to provide a secure implementation of the application. TrustZone provides us with the ability to create memory regions that are isolated from all other code in the system (including privileged code such as OS kernel). Depending on the size of the code that's going to execute in this secure regions, we may have to segment these memory regions into smaller segments whose utilization and access permissions can be tracked through a hardware-implemented reference monitor. Segmenting these isolated secure regions is important since it allows us to create a tiered trust model in our system. This way we can guarantee confidentiality of our application software most sensitive data (cryptographic keys) by isolating it from all privileged code. 
+We assume no a priori knowledge of specific vulnerabilities within the application code running on the FPGA SoC. All we know is that we are tasked to provide a secure implementation of the application. TrustZone provides us with the ability to create memory regions that are isolated from all other code in the system (including privileged code such as OS kernel). Depending on the size of the code that's going to execute in this secure regions, we may have to segment these memory regions into smaller segments whose utilization and access permissions can be tracked through a hardware-implemented reference monitor. Segmenting these isolated secure regions is important since it allows us to create a tiered trust model in our system. This way we can guarantee confidentiality of our application software most sensitive data (cryptographic keys) by isolating it from all privileged code.
 
 
 \subsubsection{Hardware Sandboxing:}
 The protections put in place with reference monitors and Trustzone are limited as they do not consider malicious hardware components interacting with secure processes. Though the process execution environment may be secured with relevant memory blocks protected, an assumed-secure IP core could house a malicious hardware trojan.
->>>>>>> master
 
-% \subsection{Adressing Vulnerabilities with Isolation}
 % An accepted paradigm of security for our proposed system would require secure execution for sensitive computations with dedicated hardware resources that are deemed secure. We address the system vulnerabilities as follows:
 %
 %
@@ -367,12 +341,9 @@ The protections put in place with reference monitors and Trustzone are limited a
 
 
 \section{IMPLEMENTING ISOLATION} \label{sec:Implementation}
-<<<<<<< HEAD
 In this section, we discuss implementation details reagrding the steps of applying the isolation methods to our security critical application. Each of the methods has unique strengths and a more comprehensive security profile can be realized upon implementing each in conjunction.
 
 To discuss the implementation in a meaningful way, we discuss each of the isolation methods in the order they would appear in a bottom-up system development process. We begin with isolating the cryptographic acceleators in hardware and proceed to configuring a secure execution environment. With our secure process utilizing hardware-accelerated encryption, CAPSL is utilized to secure the encryption engine and enforce the integrity of its behavior. This system suits the implementation of the discussed isolation methods with the inclusion of points of attack in both software and hardware.
-=======
-In this section, we discuss implementation details regarding the steps of applying the isolation methods.
 
 \subsection{Software Level}
 
@@ -381,21 +352,16 @@ In this section, we discuss implementation details regarding the steps of applyi
 \subsubsection{Reference Monitor}
 
 \subsection{Hardware Level}
->>>>>>> master
+
 
 \subsubsection{CAPSL}
 
 To enforce a deeper security profile in our system design, we utilize hardware sandboxing to isolate the untrusted encryption cores. We leverage the secure development tool presented in \cite{CAPSL}, the Component Authentication Process for Sandboxed Layouts (CAPSL), as it supplies automation for generating hardware sandboxes, allowing for a streamlined integration of questionable components into systems.
 
-<<<<<<< HEAD
 \subsubsection{Design Flow}
 
 A specification defining the interface and its behavior is required for each IP in order to formally model the IP and generate automata objects of each policy. The set of automata produced from all policies is used as a behavioral monitor within the sandbox. The specification enables the flexibility to define behavior at varying levels of abstraction and varying degrees of completeness. To elaborate, specification might contain partial interface defintions and/or behaviors abstracted through additonal computation logic. To capture security properties, CAPSL adopts the Interface Automata (IA) formalism of De Alfaro and Hetzinger \cite{deAlfaro} along with a subset of the Properties Specification Language (PSL), Sequential Extended Regular Expression (SERE) \cite{psl}. As a baseline specification, only interface layouts are required (IP interface inputs, outputs). Beyond this, any combination of IA-based descriptions of allowed behavior, explicitly denied interactions defined as SERE statements, and computational logic is allowed.
-=======
-\paragraph{IP Specification:}
 
-To utilize CAPSL's sandbox generation process, we must define the IP we wish to include. Due to the underlying modeling of the untrusted IP, specification at the interface level, or any abstraction of this, is required. That is, specification might contain partial interface defintions and/or behaviors abstracted through additonal computation logic. The specification files for AES and RSA cores are explained in Figure [RSA AND AES SPEC FILES EXPLANATION DIAGRAM].
->>>>>>> master
 
 Implementing a hardware sandbox for our demo system requires the specification of our untrusted hardware components. The specification files for AES and RSA cores are detailed in Figure \ref{fig:AES128Spec} and Figure \ref{fig:BasicRSASpec}, respectively. Along with the required interface layout definition, the specifications for both AES and RSA utilize SERE statements in conjunction with addition computational logic to provide explicitly denied interactions. More specifically, the specifications are utilizing additonal logic for abstracting the SERE specifications for detecting known trojan triggers. The RSA specification also utilizes the IA-based description of allowed behavior to define how the IP shares its current state. With our specification files providing policies to isolate undesired behavior, we can simply execute CAPSL to obtain a sandbox IP containing our hardware cores.
 
@@ -439,15 +405,10 @@ logic.def{ // Additional Computational Logic and SERE Restrictions
 \vspace*{-0.3cm}
 \end{figure}
 
-<<<<<<< HEAD
 Taking a breif look at CAPSL's internal generation process, the IP models resulting from specification are first subjected to an optimization phase. The sandbox design leverages the IA composition operation to provide compatible and secure interfaces between the IP and the rest of the system through the sandbox. Applying the operation requires the environment (the IP in our case) not to perform illegal actions, i.e. actions that the sandbox and therefore the rest of the system doesn't expect. This means that interfaces are assembled only if they are compatible, resulting in a new composed interface. With all policies respresented as Interface Automata with CAPSL, the composition operation can supply an avenue for reducing the policy automata set size through merging automata with consideration for the environmental assumptions of it.
 
 The resulting optimized set of policies is to be translated to a reference monitor. Since CAPSL translates from a formal model, it is possible to insert a variety of target IP implementations for generating the sandbox as an IP. Using a VHDL flow as a result of leveraging Trust-Hub's RTL level trojan implementations, the "Checker" is generated by one-hot encoding of the monitoring automatons as VHDL statements which capture the expected behavior of the IP. The checker module is combined together with virtual resources (BRAMs, SLRs, etc.) to generate the core logic which governs the sandbox. The generated core logic is then combined with a sandbox controller (acting as a router for all signals between interfaces and checker) to conclude the sandbox generation. The controller consists of the sandbox interface (composed with the non-trusted IP interface), physical interface, some status registers, and a multiplexer which acts as a switch to either allow IP interactions to continue or to invalidate them.
-=======
-\paragraph{Optimization:}
 
-\paragraph{Sandbox Generation:}
->>>>>>> master
 
 Upon finishing, the tool outputs the components of the sandbox as VHDL source files which can be immediately imported to design and synthesis tools for integration into the target system. For our demonstration system, we utilize Xilinx Vivado to design and sythesize the block design as seen in Figure [PS PL INTERACTION DIAGRAM]. Using a Digilent Zybo FPGA, with dual Zynq ARM Cortex A9 processors, we alot one processor for hosting an OS, configure the ethernet physical interface, and tie the hardware accelerator cores to the PS via an AXI Interconnect.
 

@@ -124,7 +124,18 @@
 \showISBNx{978-1-4503-2870-8}
 
 
-<<<<<<< HEAD
+\bibitem[\protect\citeauthoryear{Cottrell}{Cottrell}{2017}]%
+        {Cottrell2017}
+\bibfield{author}{\bibinfo{person}{Lance Cottrell}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{Isolation Technology Protects Against Risky
+  Cyberenvironments}.
+\newblock
+  \bibinfo{howpublished}{\url{https://ntrepidcorp.com/cyber-security/isolation-technology-protects-against-risky-cyberenvironments/}}.
+    (\bibinfo{date}{Feb} \bibinfo{year}{2017}).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{de~Alfaro and Henzinger}{de~Alfaro and
   Henzinger}{2001}]%
         {deAlfaro}
@@ -138,18 +149,6 @@
 \showISSN{0163-5948}
 \showDOI{%
 \url{https://doi.org/10.1145/503271.503226}}
-=======
-\bibitem[\protect\citeauthoryear{Cottrell}{Cottrell}{2017}]%
-        {Cottrell2017}
-\bibfield{author}{\bibinfo{person}{Lance Cottrell}.}
-  \bibinfo{year}{2017}\natexlab{}.
-\newblock \bibinfo{title}{Isolation Technology Protects Against Risky
-  Cyberenvironments}.
-\newblock
-  \bibinfo{howpublished}{\url{https://ntrepidcorp.com/cyber-security/isolation-technology-protects-against-risky-cyberenvironments/}}.
-    (\bibinfo{date}{Feb} \bibinfo{year}{2017}).
-\newblock
->>>>>>> master
 
 
 \bibitem[\protect\citeauthoryear{Drzevitzky}{Drzevitzky}{2010}]%
@@ -182,7 +181,17 @@
 \url{https://doi.org/10.1109/ReConFig.2009.31}}
 
 
-<<<<<<< HEAD
+\bibitem[\protect\citeauthoryear{Fireglass}{Fireglass}{2016}]%
+        {Fireglass2016}
+\bibfield{author}{\bibinfo{person}{Fireglass}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{Fireglass Emerges From Stealth with a Military-Grade,
+  Enterprise-Ready Threat Isolation Platform to Put an End to Security
+  Challenges}.
+\newblock   (\bibinfo{date}{Feb} \bibinfo{year}{2016}).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Glazberg, Moulin, Orni, Ruah, and
   Zarpas}{Glazberg et~al\mbox{.}}{2007}]%
         {psl}
@@ -193,17 +202,6 @@
 \newblock \bibinfo{publisher}{Springer Netherlands}.
 \newblock
 \showISBNx{978-1-4020-6254-4}
-=======
-\bibitem[\protect\citeauthoryear{Fireglass}{Fireglass}{2016}]%
-        {Fireglass2016}
-\bibfield{author}{\bibinfo{person}{Fireglass}.}
-  \bibinfo{year}{2016}\natexlab{}.
-\newblock \bibinfo{title}{Fireglass Emerges From Stealth with a Military-Grade,
-  Enterprise-Ready Threat Isolation Platform to Put an End to Security
-  Challenges}.
-\newblock   (\bibinfo{date}{Feb} \bibinfo{year}{2016}).
-\newblock
->>>>>>> master
 
 
 \bibitem[\protect\citeauthoryear{Hategekimana and Bobda}{Hategekimana and
@@ -271,19 +269,6 @@
 \url{https://doi.org/10.1109/SP.2007.28}}
 
 
-<<<<<<< HEAD
-\bibitem[\protect\citeauthoryear{Whitaker and Bobda}{Whitaker and
-  Bobda}{2017}]%
-        {CAPSL}
-\bibfield{author}{\bibinfo{person}{T.~J.~L. Whitaker} {and} \bibinfo{person}{C.
-  Bobda}.} \bibinfo{year}{2017}\natexlab{}.
-\newblock \showarticletitle{CAPSL: The Component Authentication Process for
-  Sandboxed Layouts}. In \bibinfo{booktitle}{{\em 2017 IEEE Computer Society
-  Annual Symposium on VLSI (ISVLSI)}}. \bibinfo{pages}{409--414}.
-\newblock
-\showDOI{%
-\url{https://doi.org/10.1109/ISVLSI.2017.78}}
-=======
 \bibitem[\protect\citeauthoryear{Jones}{Jones}{}]%
         {JonesCU}
 \bibfield{author}{\bibinfo{person}{Franklyn Jones}.}
@@ -305,7 +290,19 @@
   \bibinfo{howpublished}{\url{http://www.technewsworld.com/story/82245.html}}.
    (\bibinfo{date}{July} \bibinfo{year}{2015}).
 \newblock
->>>>>>> master
+
+
+\bibitem[\protect\citeauthoryear{Whitaker and Bobda}{Whitaker and
+  Bobda}{2017}]%
+        {CAPSL}
+\bibfield{author}{\bibinfo{person}{T.~J.~L. Whitaker} {and} \bibinfo{person}{C.
+  Bobda}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{CAPSL: The Component Authentication Process for
+  Sandboxed Layouts}. In \bibinfo{booktitle}{{\em 2017 IEEE Computer Society
+  Annual Symposium on VLSI (ISVLSI)}}. \bibinfo{pages}{409--414}.
+\newblock
+\showDOI{%
+\url{https://doi.org/10.1109/ISVLSI.2017.78}}
 
 
 \bibitem[\protect\citeauthoryear{Wiersema, Drzevitzky, and Platzner}{Wiersema

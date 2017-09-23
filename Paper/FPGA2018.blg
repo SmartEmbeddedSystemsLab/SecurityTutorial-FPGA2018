@@ -5,11 +5,8 @@ The style file: ACM-Reference-Format.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: FPGA2018.bib
-<<<<<<< HEAD
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-=======
 Warning--empty year in adobeSB
->>>>>>> master
 Warning--empty publisher in CapslHOST
 Warning--empty address in CapslHOST
 Warning--no number and no volume in Byma2014FPGAsIT
@@ -24,56 +21,50 @@ Warning--empty publisher in FestusFCCM
 Warning--empty address in FestusFCCM
 Warning--empty publisher in SPHuffmire
 Warning--empty address in SPHuffmire
-<<<<<<< HEAD
+Warning--empty year in JonesCU
 Warning--empty publisher in CAPSL
 Warning--empty address in CAPSL
 Warning--empty publisher in proof
 Warning--empty address in proof
-You've used 13 entries,
+You've used 20 entries,
             5706 wiz_defined-function locations,
-            1417 strings with 18443 characters,
-and the built_in function-call counts, 16004 in all, are:
-= -- 1875
-> -- 755
+            1458 strings with 19907 characters,
+and the built_in function-call counts, 22039 in all, are:
+= -- 2492
+> -- 1048
 < -- 0
-+ -- 241
-- -- 256
-* -- 1247
-:= -- 1729
-add.period$ -- 66
-call.type$ -- 13
-change.case$ -- 109
-chr.to.int$ -- 12
-cite$ -- 31
-duplicate$ -- 1249
-empty$ -- 903
-format.name$ -- 303
-if$ -- 3808
++ -- 327
+- -- 364
+* -- 1690
+:= -- 2480
+add.period$ -- 101
+call.type$ -- 20
+change.case$ -- 158
+chr.to.int$ -- 19
+cite$ -- 40
+duplicate$ -- 1711
+empty$ -- 1256
+format.name$ -- 415
+if$ -- 5128
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 56
-newline$ -- 164
-num.names$ -- 103
-pop$ -- 564
+missing$ -- 61
+newline$ -- 220
+num.names$ -- 159
+pop$ -- 795
 preamble$ -- 1
-purify$ -- 173
+purify$ -- 257
 quote$ -- 0
-skip$ -- 464
+skip$ -- 650
 stack$ -- 0
-substring$ -- 1050
-swap$ -- 123
+substring$ -- 1393
+swap$ -- 154
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 316
-warning$ -- 18
-while$ -- 89
+type$ -- 526
+warning$ -- 20
+while$ -- 144
 width$ -- 0
-write$ -- 284
-(There were 18 warnings)
-=======
-Warning--empty year in JonesCU
-Warning--empty publisher in proof
-Warning--empty address in proof
-(There were 15 warnings)
->>>>>>> master
+write$ -- 408
+(There were 20 warnings)

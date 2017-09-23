@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  22 SEP 2017 21:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  22 SEP 2017 21:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -973,12 +973,13 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \@lastruleclass=\count152
 \@thisrulewidth=\dimen165
 )
-No file FPGA2018.aux.
+(./FPGA2018.aux)
 \openout1 = `FPGA2018.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 69.
 LaTeX Font Info:    Try loading font information for OML+nxlmi on input line 69
 .
+
 (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
@@ -1199,9 +1200,6 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 137.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 137.
- [1.1
-Non-PDF special ignored!{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/upd
-map/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 137.
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
@@ -1231,204 +1229,48 @@ bertineT-TLF/m/n/9 à\OT1/LinuxLibertineT-TLF/b/n/9 Hardware \TS1/LinuxLibertine
 T-TLF/m/n/9 ^^Y\OT1/LinuxLibertineT-TLF/b/n/9 Reconfigurable
  []
 
-
-Package natbib Warning: Citation `CloudFPGA' on page 2 undefined on input line 
-143.
-
-
-Package natbib Warning: Citation `CapslHOST' on page 2 undefined on input line 
-143.
-
-
-Package natbib Warning: Citation `Byma2014FPGAsIT' on page 2 undefined on input
- line 143.
-
-
-Package natbib Warning: Citation `CloudFPGA' on page 2 undefined on input line 
-143.
-
-
-Package natbib Warning: Citation `sconee' on page 2 undefined on input line 143
-.
-
-
-LaTeX Warning: Reference `sec:threat_model' on page 2 undefined on input line 1
-48.
-
-
-LaTeX Warning: Reference `sec:problem_definition' on page 2 undefined on input 
-line 148.
-
-
-LaTeX Warning: Reference `sec:application' on page 2 undefined on input line 14
-8.
-
-
-LaTeX Warning: Reference `sec:Implementation' on page 2 undefined on input line
- 148.
-
-
-LaTeX Warning: Reference `sec:threat_model' on page 2 undefined on input line 1
-50.
-
-
-LaTeX Warning: Reference `sec:problem_definition' on page 2 undefined on input 
-line 150.
-
-
-LaTeX Warning: Reference `sec:application' on page 2 undefined on input line 15
-0.
-
-
-LaTeX Warning: Reference `sec:Implementation' on page 2 undefined on input line
- 150.
-
-<figures/ThreatModel.pdf, id=123, 266.9975pt x 252.945pt>
+<figures/ThreatModel.pdf, id=93, 266.9975pt x 252.945pt>
 File: figures/ThreatModel.pdf Graphic file (type pdf)
 
 <use figures/ThreatModel.pdf>
-Package pdftex.def Info: figures/ThreatModel.pdf used on input line 155.
+Package pdftex.def Info: figures/ThreatModel.pdf used on input line 151.
 (pdftex.def)             Requested size: 120.57375pt x 114.22945pt.
 
+Underfull \vbox (badness 1275) has occurred while \output is active []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+ [1.1
+Non-PDF special ignored!{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/upd
+map/pdftex.map}
 
-
-LaTeX Warning: Reference `fig:threat' on page 2 undefined on input line 166.
-
-[2.2
-
-]
-
-LaTeX Warning: Reference `fig:iaas-fpga' on page 3 undefined on input line 174.
-
-
-<figures/CloudThreatModel.pdf, id=132, 546.04pt x 184.69pt>
+ <./figures/ThreatModel.pdf>]
+<figures/CloudThreatModel.pdf, id=114, 546.04pt x 184.69pt>
 File: figures/CloudThreatModel.pdf Graphic file (type pdf)
 
 <use figures/CloudThreatModel.pdf>
-Package pdftex.def Info: figures/CloudThreatModel.pdf used on input line 178.
+Package pdftex.def Info: figures/CloudThreatModel.pdf used on input line 174.
 (pdftex.def)             Requested size: 227.83119pt x 77.05917pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:iaas-fpga' on page 3 undefined on input line 184.
-
-
-
-Package natbib Warning: Citation `Mello2015' on page 3 undefined on input line 
-192.
-
-
-Package natbib Warning: Citation `JonesCU' on page 3 undefined on input line 19
-2.
-
-
-Package natbib Warning: Citation `Fireglass2016' on page 3 undefined on input l
-ine 192.
-
-
-Package natbib Warning: Citation `Cottrell2017' on page 3 undefined on input li
-ne 192.
-
-
-Package natbib Warning: Citation `chromiumSB' on page 3 undefined on input line
- 192.
-
-
-Package natbib Warning: Citation `adobeSB' on page 3 undefined on input line 19
-2.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3.3 <./figures/ThreatModel.pdf> <./figures/CloudThreatModel.pdf>]
-
-Package natbib Warning: Citation `HuffEmbedded' on page 4 undefined on input li
-ne 202.
-
-
-Package natbib Warning: Citation `Huffmire' on page 4 undefined on input line 2
-02.
-
-
-Package natbib Warning: Citation `SPHuffmire' on page 4 undefined on input line
- 202.
-
-
-LaTeX Warning: Reference `fig:ted' on page 4 undefined on input line 202.
-
-
-Package natbib Warning: Citation `SPHuffmire' on page 4 undefined on input line
- 202.
-
-<figures/ted_access.pdf, id=145, 323.2075pt x 252.945pt>
+ [2.2 <./figures/CloudThreatModel.pdf>]
+<figures/ted_access.pdf, id=143, 323.2075pt x 252.945pt>
 File: figures/ted_access.pdf Graphic file (type pdf)
 
 <use figures/ted_access.pdf>
-Package pdftex.def Info: figures/ted_access.pdf used on input line 207.
+Package pdftex.def Info: figures/ted_access.pdf used on input line 198.
 (pdftex.def)             Requested size: 180.86061pt x 141.54402pt.
 
-
-Package natbib Warning: Citation `FestusFCCM' on page 4 undefined on input line
- 214.
-
-
-Package natbib Warning: Citation `FestusFCCM' on page 4 undefined on input line
- 214.
-
-
-LaTeX Warning: Reference `fig:access' on page 4 undefined on input line 214.
-
-<figures/access.pdf, id=146, 505.89pt x 276.03125pt>
+<figures/access.pdf, id=147, 505.89pt x 276.03125pt>
 File: figures/access.pdf Graphic file (type pdf)
  <use figures/access.pdf>
-Package pdftex.def Info: figures/access.pdf used on input line 218.
+Package pdftex.def Info: figures/access.pdf used on input line 209.
 (pdftex.def)             Requested size: 241.14749pt x 131.5795pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package natbib Warning: Citation `proofcarrying' on page 4 undefined on input l
-ine 225.
-
-
-Package natbib Warning: Citation `proof' on page 4 undefined on input line 225.
-
-
-
-Package natbib Warning: Citation `proofcar' on page 4 undefined on input line 2
-25.
-
-
-Package natbib Warning: Citation `proofcarrying' on page 4 undefined on input l
-ine 225.
-
-
-Package natbib Warning: Citation `proof' on page 4 undefined on input line 225.
-
-
-
-Package natbib Warning: Citation `proof' on page 4 undefined on input line 225.
-
-
-
-Package natbib Warning: Citation `proof' on page 4 undefined on input line 225.
-
-
-
-Package natbib Warning: Citation `proofcar' on page 4 undefined on input line 2
-25.
-
-[4.4 <./figures/ted_access.pdf> <./figures/access.pdf>]
-
-LaTeX Warning: Reference `fig:ted' on page 5 undefined on input line 236.
-
-<figures/TrustZoneHardware.pdf, id=202, 391.4625pt x 283.0575pt>
+ [3.3 <./figures/ted_access.pdf> <./figures/access.pdf>]
+<figures/TrustZoneHardware.pdf, id=217, 391.4625pt x 283.0575pt>
 File: figures/TrustZoneHardware.pdf Graphic file (type pdf)
 
 <use figures/TrustZoneHardware.pdf>
-Package pdftex.def Info: figures/TrustZoneHardware.pdf used on input line 240.
+Package pdftex.def Info: figures/TrustZoneHardware.pdf used on input line 231.
 (pdftex.def)             Requested size: 180.86061pt x 130.77814pt.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1438,48 +1280,28 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 262.
- [5.5 <./figures/TrustZoneHardware.pdf>]
+(Font)              scaled to size 9.0pt on input line 253.
+ [4.4 <./figures/TrustZoneHardware.pdf>]
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 287.
+(Font)              scaled to size 9.0pt on input line 278.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 287.
+(Font)              scaled to size 9.0pt on input line 278.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 289.
+               Default added (so using `tbp') on input line 280.
 
-<figures/ProcessInteractions.pdf, id=212, 628.3475pt x 415.5525pt>
+<figures/ProcessInteractions.pdf, id=227, 628.3475pt x 415.5525pt>
 File: figures/ProcessInteractions.pdf Graphic file (type pdf)
 
 <use figures/ProcessInteractions.pdf>
-Package pdftex.def Info: figures/ProcessInteractions.pdf used on input line 291
+Package pdftex.def Info: figures/ProcessInteractions.pdf used on input line 282
 .
 (pdftex.def)             Requested size: 241.14749pt x 159.47777pt.
- [6.6 <./figures/ProcessInteractions.pdf>]
-
-Package natbib Warning: Citation `CAPSL' on page 7 undefined on input line 388.
-
-
-
-Package natbib Warning: Citation `deAlfaro' on page 7 undefined on input line 3
-93.
-
-
-Package natbib Warning: Citation `psl' on page 7 undefined on input line 393.
-
-[7.7]
-
-LaTeX Warning: Reference `fig:AES128Spec' on page 8 undefined on input line 400
-.
-
-
-LaTeX Warning: Reference `fig:BasicRSASpec' on page 8 undefined on input line 4
-00.
-
+ [5.5 <./figures/ProcessInteractions.pdf>]
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.0pt on input line 404.
-LaTeX Font Info:    Try loading font information for OT1+zi4 on input line 404.
+(Font)              scaled to size 5.0pt on input line 370.
+LaTeX Font Info:    Try loading font information for OT1+zi4 on input line 370.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/inconsolata/ot1zi4.fd
 File: ot1zi4.fd 2014/06/22 OT1/zi4 (Inconsolata)
@@ -1488,7 +1310,8 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `zi4' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 484.
+ [6.6]
+LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 445.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
@@ -1511,102 +1334,80 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--79
  blog . chromium . org / 2008 / 10 /
  []
 
-[8.8]
-Underfull \hbox (badness 10000) in paragraph at lines 144--153
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--137
 []\OT1/LinuxLibertineT-TLF/m/n/7 (+20) Lance Cot-trell. 2017.  Iso-la-tion Tech
 -nol-ogy Pro-tects Against
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--153
+Underfull \hbox (badness 10000) in paragraph at lines 129--137
 \OT1/LinuxLibertineT-TLF/m/n/7 (+20) Risky Cy-beren-vi-ron-ments.  []$häps : / 
 / ntrepidcorp . com / cyber-[]security /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--153
+Underfull \hbox (badness 10000) in paragraph at lines 129--137
 \OT1/LinuxLibertineT-TLF/m/n/7 (+20) isolation-[]technology-[]protects-[]agains
 t-[]risky-[]cyberenvironments/$[]. (Feb
  []
 
 
-Underfull \hbox (badness 4531) in paragraph at lines 289--296
+Underfull \hbox (badness 4531) in paragraph at lines 274--281
 []\OT1/LinuxLibertineT-TLF/m/n/7 (+20) Franklyn Jones.  Cy-ber Se-cu-rity for C
 redit Unions: Man-ag-ing the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--296
+Underfull \hbox (badness 10000) in paragraph at lines 274--281
 \OT1/LinuxLibertineT-TLF/m/n/7 (+20) Unique Chal-lenges.  []$häps : / / www . b
 ankinfosecurity . com / webinars /
  []
 
-)
+[7.7]) [8.8
 
-Package natbib Warning: There were undefined citations.
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 475.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 475.
+ (./FPGA2018.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 475.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 475.
+Package rerunfilecheck Info: File `FPGA2018.out' has not changed.
+(rerunfilecheck)             Checksum: 5B46267177F245BFB64970608C1625DA;3351.
 
-[9.9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 514.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 514.
- (./FPGA2018.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 514.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 514.
-
-
-Package rerunfilecheck Warning: File `FPGA2018.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `FPGA2018.out':
-(rerunfilecheck)             Before: 92ACEA036B42F86F460D517F7306CF92;5457
-(rerunfilecheck)             After:  6AF2B2A665305EE159F007AE5FBB911F;3061.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 514.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 475.
  ) 
 Here is how much of TeX's memory you used:
- 19046 strings out of 493014
- 286319 string characters out of 6133351
- 511836 words of memory out of 5000000
+ 19036 strings out of 493014
+ 286115 string characters out of 6133351
+ 465836 words of memory out of 5000000
  21691 multiletter control sequences out of 15000+600000
- 67941 words of font info for 264 fonts, out of 8000000 for 9000
+ 67195 words of font info for 260 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,12n,94p,2028b,1346s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.4.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{/us
-r/local/texlive/2016/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-4.enc}{/usr/
-local/texlive/2016/texmf-dist/fonts/enc/dvips/libertine/lbtn_c6xmqr.enc}{/usr/l
-ocal/texlive/2016/texmf-dist/fonts/enc/dvips/libertine/lbtn_xogrpz.enc}{/usr/lo
-cal/texlive/2016/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/usr/loc
-al/texlive/2016/texmf-dist/fonts/enc/dvips/libertine/lbtn_lu7m2n.enc}{/usr/loca
-l/texlive/2016/texmf-dist/fonts/enc/dvips/libertine/lbtn_c7kyj5.enc}</usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pf
-b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/libertine/LinBiolinumT
-I.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/libertine/LinLiber
-tineT.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/libertine/LinL
-ibertineTB.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/libertine
-/LinLibertineTI.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfo
-nts/txsy.pfb>
-Output written on FPGA2018.pdf (9 pages, 672797 bytes).
+ 60i,11n,94p,2006b,1346s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{/
+usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-4.enc}{/us
+r/local/texlive/2016/texmf-dist/fonts/enc/dvips/libertine/lbtn_c6xmqr.enc}{/usr
+/local/texlive/2016/texmf-dist/fonts/enc/dvips/libertine/lbtn_xogrpz.enc}{/usr/
+local/texlive/2016/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/usr/l
+ocal/texlive/2016/texmf-dist/fonts/enc/dvips/libertine/lbtn_c7kyj5.enc}{/usr/lo
+cal/texlive/2016/texmf-dist/fonts/enc/dvips/libertine/lbtn_lu7m2n.enc}</usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/libertine/LinBiolinu
+mTI.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/libertine/LinLib
+ertineT.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/libertine/Li
+nLibertineTB.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/liberti
+ne/LinLibertineTI.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/tx
+fonts/txsy.pfb>
+Output written on FPGA2018.pdf (8 pages, 670827 bytes).
 PDF statistics:
- 444 PDF objects out of 1000 (max. 8388607)
- 397 compressed objects within 4 object streams
- 139 named destinations out of 1000 (max. 500000)
- 31511 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 441 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 133 named destinations out of 1000 (max. 500000)
+ 31423 words of extra memory for PDF output out of 35830 (max. 10000000)
 
