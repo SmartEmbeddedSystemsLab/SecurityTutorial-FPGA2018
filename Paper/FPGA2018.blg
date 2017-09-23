@@ -5,7 +5,11 @@ The style file: ACM-Reference-Format.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: FPGA2018.bib
+<<<<<<< HEAD
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+=======
+Warning--empty year in adobeSB
+>>>>>>> master
 Warning--empty publisher in CapslHOST
 Warning--empty address in CapslHOST
 Warning--no number and no volume in Byma2014FPGAsIT
@@ -20,6 +24,7 @@ Warning--empty publisher in FestusFCCM
 Warning--empty address in FestusFCCM
 Warning--empty publisher in SPHuffmire
 Warning--empty address in SPHuffmire
+<<<<<<< HEAD
 Warning--empty publisher in CAPSL
 Warning--empty address in CAPSL
 Warning--empty publisher in proof
@@ -66,3 +71,9 @@ while$ -- 89
 width$ -- 0
 write$ -- 284
 (There were 18 warnings)
+=======
+Warning--empty year in JonesCU
+Warning--empty publisher in proof
+Warning--empty address in proof
+(There were 15 warnings)
+>>>>>>> master

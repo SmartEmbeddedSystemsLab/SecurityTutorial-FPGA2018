@@ -37,6 +37,47 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
+\bibitem[\protect\citeauthoryear{Arnautov, Trach, Gregor, Knauth, Martin,
+  Priebe, Lind, Muthukumaran, O{\textquoteright}Keeffe, Stillwell, Goltzsche,
+  Eyers, Kapitza, Pietzuch, and Fetzer}{Arnautov et~al\mbox{.}}{2016}]%
+        {sconee}
+\bibfield{author}{\bibinfo{person}{Sergei Arnautov}, \bibinfo{person}{Bohdan
+  Trach}, \bibinfo{person}{Franz Gregor}, \bibinfo{person}{Thomas Knauth},
+  \bibinfo{person}{Andre Martin}, \bibinfo{person}{Christian Priebe},
+  \bibinfo{person}{Joshua Lind}, \bibinfo{person}{Divya Muthukumaran},
+  \bibinfo{person}{Dan O{\textquoteright}Keeffe}, \bibinfo{person}{Mark~L.
+  Stillwell}, \bibinfo{person}{David Goltzsche}, \bibinfo{person}{Dave Eyers},
+  \bibinfo{person}{R{\"u}diger Kapitza}, \bibinfo{person}{Peter Pietzuch},
+  {and} \bibinfo{person}{Christof Fetzer}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{SCONE}: Secure Linux Containers with Intel {SGX}}.
+  In \bibinfo{booktitle}{{\em 12th {USENIX} Symposium on Operating Systems
+  Design and Implementation ({OSDI} 16)}}. \bibinfo{publisher}{{USENIX}
+  Association}, \bibinfo{address}{GA}, \bibinfo{pages}{689--703}.
+\newblock
+\showISBNx{978-1-931971-33-1}
+
+
+\bibitem[\protect\citeauthoryear{Blog}{Blog}{}]%
+        {adobeSB}
+\bibfield{author}{\bibinfo{person}{Adobe Blog}.}
+\newblock \bibinfo{title}{Security@Adobe}.
+\newblock \bibinfo{howpublished}{\url{http://blogs.adobe.com/security/}}.
+  (\bibinfo{year}{????}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Blog}{Blog}{2008}]%
+        {chromiumSB}
+\bibfield{author}{\bibinfo{person}{Chromium Blog}.}
+  \bibinfo{year}{2008}\natexlab{}.
+\newblock \bibinfo{title}{A new approach to browser security: the Google Chrome
+  Sandbox}.
+\newblock
+  \bibinfo{howpublished}{\url{https://blog.chromium.org/2008/10/new-approach-to-browser-security-google.html}}.
+    (\bibinfo{date}{Oct} \bibinfo{year}{2008}).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Bobda, Whitaker, Kamhoua, Kwiat, and
   Njilla}{Bobda et~al\mbox{.}}{2017}]%
         {CapslHOST}
@@ -83,6 +124,7 @@
 \showISBNx{978-1-4503-2870-8}
 
 
+<<<<<<< HEAD
 \bibitem[\protect\citeauthoryear{de~Alfaro and Henzinger}{de~Alfaro and
   Henzinger}{2001}]%
         {deAlfaro}
@@ -96,6 +138,18 @@
 \showISSN{0163-5948}
 \showDOI{%
 \url{https://doi.org/10.1145/503271.503226}}
+=======
+\bibitem[\protect\citeauthoryear{Cottrell}{Cottrell}{2017}]%
+        {Cottrell2017}
+\bibfield{author}{\bibinfo{person}{Lance Cottrell}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{Isolation Technology Protects Against Risky
+  Cyberenvironments}.
+\newblock
+  \bibinfo{howpublished}{\url{https://ntrepidcorp.com/cyber-security/isolation-technology-protects-against-risky-cyberenvironments/}}.
+    (\bibinfo{date}{Feb} \bibinfo{year}{2017}).
+\newblock
+>>>>>>> master
 
 
 \bibitem[\protect\citeauthoryear{Drzevitzky}{Drzevitzky}{2010}]%
@@ -128,6 +182,7 @@
 \url{https://doi.org/10.1109/ReConFig.2009.31}}
 
 
+<<<<<<< HEAD
 \bibitem[\protect\citeauthoryear{Glazberg, Moulin, Orni, Ruah, and
   Zarpas}{Glazberg et~al\mbox{.}}{2007}]%
         {psl}
@@ -138,6 +193,17 @@
 \newblock \bibinfo{publisher}{Springer Netherlands}.
 \newblock
 \showISBNx{978-1-4020-6254-4}
+=======
+\bibitem[\protect\citeauthoryear{Fireglass}{Fireglass}{2016}]%
+        {Fireglass2016}
+\bibfield{author}{\bibinfo{person}{Fireglass}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{Fireglass Emerges From Stealth with a Military-Grade,
+  Enterprise-Ready Threat Isolation Platform to Put an End to Security
+  Challenges}.
+\newblock   (\bibinfo{date}{Feb} \bibinfo{year}{2016}).
+\newblock
+>>>>>>> master
 
 
 \bibitem[\protect\citeauthoryear{Hategekimana and Bobda}{Hategekimana and
@@ -205,6 +271,7 @@
 \url{https://doi.org/10.1109/SP.2007.28}}
 
 
+<<<<<<< HEAD
 \bibitem[\protect\citeauthoryear{Whitaker and Bobda}{Whitaker and
   Bobda}{2017}]%
         {CAPSL}
@@ -216,6 +283,29 @@
 \newblock
 \showDOI{%
 \url{https://doi.org/10.1109/ISVLSI.2017.78}}
+=======
+\bibitem[\protect\citeauthoryear{Jones}{Jones}{}]%
+        {JonesCU}
+\bibfield{author}{\bibinfo{person}{Franklyn Jones}.}
+\newblock \bibinfo{title}{Cyber Security for Credit Unions: Managing the Unique
+  Challenges}.
+\newblock
+  \bibinfo{howpublished}{\url{https://www.bankinfosecurity.com/webinars/how-isolation-technology-protects-cus-from-cyber-attacks-w-575}}.
+    (\bibinfo{year}{????}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Jr}{Jr}{2015}]%
+        {Mello2015}
+\bibfield{author}{\bibinfo{person}{John P.~Mello Jr}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{title}{Is Isolating the Internet Key to Bulletproof
+  Security?}
+\newblock
+  \bibinfo{howpublished}{\url{http://www.technewsworld.com/story/82245.html}}.
+   (\bibinfo{date}{July} \bibinfo{year}{2015}).
+\newblock
+>>>>>>> master
 
 
 \bibitem[\protect\citeauthoryear{Wiersema, Drzevitzky, and Platzner}{Wiersema
