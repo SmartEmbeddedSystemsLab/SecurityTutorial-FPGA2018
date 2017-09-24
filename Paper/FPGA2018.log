@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  24 SEP 2017 16:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  24 SEP 2017 16:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1282,7 +1282,7 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<figures/sandbox.pdf, id=225, 283.0575pt x 251.94125pt>
+<figures/sandbox.pdf, id=226, 283.0575pt x 251.94125pt>
 File: figures/sandbox.pdf Graphic file (type pdf)
 
 <use figures/sandbox.pdf>
@@ -1298,7 +1298,7 @@ LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/it' will be
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 263.
 
-<figures/ProcessInteractions.pdf, id=251, 628.3475pt x 415.5525pt>
+<figures/ProcessInteractions.pdf, id=253, 628.3475pt x 415.5525pt>
 File: figures/ProcessInteractions.pdf Graphic file (type pdf)
 
 <use figures/ProcessInteractions.pdf>
@@ -1322,7 +1322,7 @@ Package microtype Info: Loading generic settings for font family
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 5.0pt on input line 360.
 
-<figures/BlockDesign.pdf, id=299, 391.4625pt x 283.0575pt>
+<figures/BlockDesign.pdf, id=300, 391.4625pt x 283.0575pt>
 File: figures/BlockDesign.pdf Graphic file (type pdf)
 
 <use figures/BlockDesign.pdf>
@@ -1432,7 +1432,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 486.
 Here is how much of TeX's memory you used:
  19108 strings out of 493014
  287488 string characters out of 6133351
- 500825 words of memory out of 5000000
+ 501825 words of memory out of 5000000
  21727 multiletter control sequences out of 15000+600000
  69232 words of font info for 274 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -1452,10 +1452,10 @@ ertineT.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/libertine/Li
 nLibertineTB.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/liberti
 ne/LinLibertineTI.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/tx
 fonts/txsy.pfb>
-Output written on FPGA2018.pdf (9 pages, 766707 bytes).
+Output written on FPGA2018.pdf (9 pages, 766835 bytes).
 PDF statistics:
- 495 PDF objects out of 1000 (max. 8388607)
- 441 compressed objects within 5 object streams
+ 496 PDF objects out of 1000 (max. 8388607)
+ 442 compressed objects within 5 object streams
  145 named destinations out of 1000 (max. 500000)
  31417 words of extra memory for PDF output out of 35830 (max. 10000000)
 
