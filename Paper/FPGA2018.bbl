@@ -295,7 +295,7 @@
 
 
 \bibitem[\protect\citeauthoryear{Intel}{Intel}{2017}]%
-        {intel}
+        {iintel}
 \bibfield{author}{\bibinfo{person}{Intel}.} \bibinfo{year}{2017}\natexlab{}.
 \newblock \bibinfo{title}{Report: Intel Inside New Audi Autonomous Car System}.
 \newblock   (\bibinfo{year}{2017}).

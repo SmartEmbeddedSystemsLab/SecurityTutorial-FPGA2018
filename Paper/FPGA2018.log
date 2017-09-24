@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  24 SEP 2017 13:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  24 SEP 2017 16:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1175,9 +1175,9 @@ Package caption Info: End \AtBeginDocument code.
 
 Excluding 'CCSXML' comment.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 137.
+(Font)              scaled to size 17.28pt on input line 134.
 LaTeX Font Info:    Try loading font information for OT1+LinuxBiolinumT-TLF on 
-input line 137.
+input line 134.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/libertine/OT1LinuxBiolinumT-TLF.f
 d
@@ -1185,7 +1185,7 @@ File: OT1LinuxBiolinumT-TLF.fd 2012/11/26 (autoinst) Font definitions for OT1/L
 inuxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 137.
+(Font)              scaled to size 17.28pt on input line 134.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1193,21 +1193,21 @@ Package microtype Info: Loading generic settings for font family
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/bx/n' in size <17.28> no
 t available
 (Font)              Font shape `OT1/LinuxBiolinumT-TLF/b/n' tried instead on in
-put line 137.
+put line 134.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 137.
+(Font)              scaled to size 17.28pt on input line 134.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 137.
+(Font)              scaled to size 12.0pt on input line 134.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 137.
+(Font)              scaled to size 10.0pt on input line 134.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 137.
+(Font)              scaled to size 7.0pt on input line 134.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 137.
+(Font)              scaled to size 9.0pt on input line 134.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 137.
+(Font)              scaled to size 10.95pt on input line 134.
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
- input line 137.
+ input line 134.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.
 fd
@@ -1215,13 +1215,13 @@ File: TS1LinuxLibertineT-TLF.fd 2012/11/26 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 137.
+(Font)              scaled to size 9.0pt on input line 134.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (2.51418pt too wide) in paragraph at lines 137--137
+Overfull \hbox (2.51418pt too wide) in paragraph at lines 134--134
 \OT1/LinuxLibertineT-TLF/b/n/9 ware Se-cu-rity Im-ple-men-ta-tion; \TS1/LinuxLi
 bertineT-TLF/m/n/9 ˆ\OT1/LinuxLibertineT-TLF/b/n/9 Hardware \TS1/LinuxLibertine
 T-TLF/m/n/9 ^^Y\OT1/LinuxLibertineT-TLF/b/n/9 Reconfigurable
@@ -1231,10 +1231,10 @@ T-TLF/m/n/9 ^^Y\OT1/LinuxLibertineT-TLF/b/n/9 Reconfigurable
 File: figures/ThreatModel.pdf Graphic file (type pdf)
 
 <use figures/ThreatModel.pdf>
-Package pdftex.def Info: figures/ThreatModel.pdf used on input line 151.
+Package pdftex.def Info: figures/ThreatModel.pdf used on input line 148.
 (pdftex.def)             Requested size: 120.57375pt x 114.22945pt.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 153.
+(Font)              scaled to size 9.0pt on input line 150.
  [1.1
 Non-PDF special ignored!{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/upd
 map/pdftex.map}
@@ -1244,20 +1244,26 @@ map/pdftex.map}
 File: figures/CloudThreatModel.pdf Graphic file (type pdf)
 
 <use figures/CloudThreatModel.pdf>
-Package pdftex.def Info: figures/CloudThreatModel.pdf used on input line 175.
+Package pdftex.def Info: figures/CloudThreatModel.pdf used on input line 168.
 (pdftex.def)             Requested size: 227.83119pt x 77.05917pt.
- [2.2 <./figures/CloudThreatModel.pdf>]
+
+Overfull \hbox (1.45357pt too wide) in paragraph at lines 175--176
+[]\OT1/LinuxLibertineT-TLF/m/n/9 (-20) An op-ti-mal use of FPGA re-sources woul
+d al-low the pro-grammable
+ []
+
+[2.2 <./figures/CloudThreatModel.pdf>]
 <figures/ted_access.pdf, id=140, 323.2075pt x 252.945pt>
 File: figures/ted_access.pdf Graphic file (type pdf)
 
 <use figures/ted_access.pdf>
-Package pdftex.def Info: figures/ted_access.pdf used on input line 200.
+Package pdftex.def Info: figures/ted_access.pdf used on input line 190.
 (pdftex.def)             Requested size: 180.86061pt x 141.54402pt.
 
 <figures/access.pdf, id=144, 505.89pt x 276.03125pt>
 File: figures/access.pdf Graphic file (type pdf)
  <use figures/access.pdf>
-Package pdftex.def Info: figures/access.pdf used on input line 212.
+Package pdftex.def Info: figures/access.pdf used on input line 200.
 (pdftex.def)             Requested size: 241.14749pt x 131.5795pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1267,7 +1273,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: figures/TrustZoneHardware.pdf Graphic file (type pdf)
 
 <use figures/TrustZoneHardware.pdf>
-Package pdftex.def Info: figures/TrustZoneHardware.pdf used on input line 234.
+Package pdftex.def Info: figures/TrustZoneHardware.pdf used on input line 221.
 (pdftex.def)             Requested size: 180.86061pt x 130.77814pt.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1275,30 +1281,35 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [4.4 <./figures/TrustZoneHardware.pdf>]
+)
+<figures/sandbox.pdf, id=225, 283.0575pt x 251.94125pt>
+File: figures/sandbox.pdf Graphic file (type pdf)
+
+<use figures/sandbox.pdf>
+Package pdftex.def Info: figures/sandbox.pdf used on input line 244.
+(pdftex.def)             Requested size: 180.86061pt x 160.98427pt.
+ [4.4 <./figures/TrustZoneHardware.pdf> <./figures/sandbox.pdf>]
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 278.
+(Font)              scaled to size 9.0pt on input line 261.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 278.
+(Font)              scaled to size 9.0pt on input line 261.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 280.
+               Default added (so using `tbp') on input line 263.
 
-<figures/ProcessInteractions.pdf, id=236, 628.3475pt x 415.5525pt>
+<figures/ProcessInteractions.pdf, id=251, 628.3475pt x 415.5525pt>
 File: figures/ProcessInteractions.pdf Graphic file (type pdf)
 
 <use figures/ProcessInteractions.pdf>
-Package pdftex.def Info: figures/ProcessInteractions.pdf used on input line 282
+Package pdftex.def Info: figures/ProcessInteractions.pdf used on input line 265
 .
 (pdftex.def)             Requested size: 241.14749pt x 159.47777pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [5.5 <./figures/ProcessInteractions.pdf>]
-Underfull \vbox (badness 4479) has occurred while \output is active []
+Underfull \vbox (badness 6775) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for OT1+zi4 on input line 402.
+ [6.6]
+LaTeX Font Info:    Try loading font information for OT1+zi4 on input line 356.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/inconsolata/ot1zi4.fd
@@ -1309,10 +1320,45 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.0pt on input line 406.
- [6.6]
-LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 480.
+(Font)              scaled to size 5.0pt on input line 360.
 
+<figures/BlockDesign.pdf, id=299, 391.4625pt x 283.0575pt>
+File: figures/BlockDesign.pdf Graphic file (type pdf)
+
+<use figures/BlockDesign.pdf>
+Package pdftex.def Info: figures/BlockDesign.pdf used on input line 400.
+(pdftex.def)             Requested size: 141.76198pt x 102.50528pt.
+
+Underfull \hbox (badness 3668) in paragraph at lines 406--407
+\OT1/LinuxLibertineT-TLF/m/n/9 (+20) gen-er-a-tion pro-cess,
+ []
+
+
+Underfull \hbox (badness 2913) in paragraph at lines 406--407
+\OT1/LinuxLibertineT-TLF/m/n/9 (+20) ing from spec-i-fi-ca-
+ []
+
+
+Underfull \hbox (badness 4954) in paragraph at lines 406--407
+\OT1/LinuxLibertineT-TLF/m/n/9 (+20) tion are first sub-
+ []
+
+
+Underfull \hbox (badness 2512) in paragraph at lines 406--407
+\OT1/LinuxLibertineT-TLF/m/n/9 (+20) com-pat-i-ble and se-
+ []
+
+
+Underfull \hbox (badness 4156) in paragraph at lines 406--407
+\OT1/LinuxLibertineT-TLF/m/n/9 (+20) cure in-ter-faces be-
+ []
+
+
+Underfull \hbox (badness 1990) in paragraph at lines 406--407
+\OT1/LinuxLibertineT-TLF/m/n/9 (+20) rest of the sys-tem
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 438.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
 File: ts1zi4.fd 2014/06/22 Fontinst v1.933 font definitions for TS1/zi4.
@@ -1321,8 +1367,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `zi4' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [7.7]
-(./FPGA2018.bbl
+ [7.7 <./figures/BlockDesign.pdf>] (./FPGA2018.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 96--104
 []\OT1/LinuxLibertineT-TLF/m/n/7 (+20) Chromium Blog. 2008.  A new ap-proach to
  browser se-cu-rity:
@@ -1353,6 +1398,9 @@ t-[]risky-[]cyberenvironments/$[]. (Feb
  []
 
 
+Underfull \vbox (badness 2057) has occurred while \output is active []
+
+ [8.8]
 Underfull \hbox (badness 4531) in paragraph at lines 307--314
 []\OT1/LinuxLibertineT-TLF/m/n/7 (+20) Franklyn Jones.  Cy-ber Se-cu-rity for C
 redit Unions: Man-ag-ing the
@@ -1364,27 +1412,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 307--314
 ankinfosecurity . com / webinars /
  []
 
-) [8.8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 534.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 534.
+) [9.9
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 486.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 486.
  (./FPGA2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 534.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 534.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 486.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 486.
 Package rerunfilecheck Info: File `FPGA2018.out' has not changed.
-(rerunfilecheck)             Checksum: 62517B83BB6968037B3E296EE891A9D3;3038.
+(rerunfilecheck)             Checksum: 00A90E1630CB85B826E16127954CBD8E;3038.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 534.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 486.
  ) 
 Here is how much of TeX's memory you used:
- 19089 strings out of 493014
- 287100 string characters out of 6133351
- 544825 words of memory out of 5000000
- 21715 multiletter control sequences out of 15000+600000
- 69021 words of font info for 273 fonts, out of 8000000 for 9000
+ 19108 strings out of 493014
+ 287488 string characters out of 6133351
+ 500825 words of memory out of 5000000
+ 21727 multiletter control sequences out of 15000+600000
+ 69232 words of font info for 274 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,11n,94p,2007b,1346s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{/
@@ -1402,10 +1452,10 @@ ertineT.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/libertine/Li
 nLibertineTB.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/liberti
 ne/LinLibertineTI.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/tx
 fonts/txsy.pfb>
-Output written on FPGA2018.pdf (8 pages, 669946 bytes).
+Output written on FPGA2018.pdf (9 pages, 766707 bytes).
 PDF statistics:
- 467 PDF objects out of 1000 (max. 8388607)
- 420 compressed objects within 5 object streams
- 142 named destinations out of 1000 (max. 500000)
- 31407 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 495 PDF objects out of 1000 (max. 8388607)
+ 441 compressed objects within 5 object streams
+ 145 named destinations out of 1000 (max. 500000)
+ 31417 words of extra memory for PDF output out of 35830 (max. 10000000)
 

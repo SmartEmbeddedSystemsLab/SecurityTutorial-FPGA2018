@@ -1,10 +1,11 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: FPGA2018.aux
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: FPGA2018.aux
 The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: FPGA2018.bib
-Repeated entry---line 805 of file FPGA2018.bib
- : @misc{intel
- :            ,
-I'm skipping whatever remains of this entry
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--numpages field, but no articleno or eid field, in referencem
 Warning--empty year in adobeSB
 Warning--empty publisher in CapslHOST
@@ -28,4 +29,45 @@ Warning--empty publisher in CAPSL
 Warning--empty address in CAPSL
 Warning--empty publisher in proof
 Warning--empty address in proof
-(There was 1 error message)
+You've used 27 entries,
+            5706 wiz_defined-function locations,
+            1487 strings with 20725 characters,
+and the built_in function-call counts, 28339 in all, are:
+= -- 3207
+> -- 1223
+< -- 0
++ -- 375
+- -- 479
+* -- 2086
+:= -- 3164
+add.period$ -- 136
+call.type$ -- 27
+change.case$ -- 196
+chr.to.int$ -- 24
+cite$ -- 50
+duplicate$ -- 2210
+empty$ -- 1633
+format.name$ -- 489
+if$ -- 6522
+int.to.chr$ -- 4
+int.to.str$ -- 0
+missing$ -- 71
+newline$ -- 279
+num.names$ -- 213
+pop$ -- 1020
+preamble$ -- 1
+purify$ -- 328
+quote$ -- 0
+skip$ -- 858
+stack$ -- 0
+substring$ -- 1972
+swap$ -- 193
+text.length$ -- 99
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 724
+warning$ -- 23
+while$ -- 200
+width$ -- 0
+write$ -- 533
+(There were 23 warnings)
