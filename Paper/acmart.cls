@@ -5,17 +5,17 @@
 %% The original source files were:
 %%
 %% acmart.dtx  (with options: `class')
-%% 
+%%
 %% IMPORTANT NOTICE:
-%% 
+%%
 %% For the copyright see the source file.
-%% 
+%%
 %% Any modified versions of this file must be renamed
 %% with new filenames distinct from acmart.cls.
-%% 
+%%
 %% For distribution of the original source see the terms
 %% for copying and modification in the file acmart.dtx.
-%% 
+%%
 %% This generated file may be distributed as long as the
 %% original source files, as listed above, are part of the
 %% same distribution. (The sources need not necessarily be
@@ -894,7 +894,7 @@ Computing Machinery]
   \ifx\acmConference@shortname\@empty
     \gdef\acmConference@shortname{#2}%
   \fi}
-\acmConference[ICDSC'11]{IEE/ACM Conference}{September 5-7, 2017}{Stanford University, CA, USA}
+\acmConference[FPGA'18]{IEE/ACM Conference}{February 25-27, 2018}{Monterey, CA, USA}
 \def\subtitle#1{\def\@subtitle{#1}}
 \subtitle{}
 \newcount\num@authorgroups
@@ -985,7 +985,7 @@ Computing Machinery]
 \def\acmArticleSeq#1{\def\@acmArticleSeq{#1}}
 \acmArticleSeq{\@acmArticle}
 \def\acmYear#1{\def\@acmYear{#1}}
-\acmYear{2017}
+\acmYear{2018}
 \def\acmMonth#1{\def\@acmMonth{#1}}
 \acmMonth{1}
 \def\@acmPubDate{\ifcase\@acmMonth\or
